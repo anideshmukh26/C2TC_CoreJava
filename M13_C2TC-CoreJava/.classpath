@@ -15,5 +15,7 @@
 	<classpathentry kind="src" path="Day7_13-Mar-2022"/>
 	<classpathentry kind="src" path="Day8_14-Mar-2022"/>
 	<classpathentry kind="src" path="Day9_15-Mar-2022"/>
+	<classpathentry kind="src" path="Day10_16-Mar-2022"/>
+	<classpathentry kind="src" path="Day11_17-Mar-2022"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
