@@ -1,4 +1,4 @@
-//program of Fibinacci Series
+//program to demonstrate Fibonacci Series
 
 package day6;
 

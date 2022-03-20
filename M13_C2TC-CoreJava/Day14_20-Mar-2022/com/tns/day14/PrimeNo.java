@@ -1,13 +1,20 @@
-//program Prime Number
+// program to check user's given no. is prime no. or not.
 
-package day6;
+package com.tns.day14;
 
-public class PrimeNumber
+import java.util.Scanner;
+
+public class PrimeNo
 {
 	public static void main(String[] args)
 	{
-		int i, m=0,flag=0;
-		int n=13;
+		int i,n,m=0,flag=0;
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the number to check: ");
+		n= sc.nextInt();
+		sc.close();
+		
 		m=n/2;
 		if(n==0||n==1)
 		{
@@ -31,4 +38,3 @@ public class PrimeNumber
 		}	
 	}
 }
-
