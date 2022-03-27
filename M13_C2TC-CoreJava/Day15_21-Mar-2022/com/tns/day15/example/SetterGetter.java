@@ -2,6 +2,8 @@
 
 package com.tns.day15.example;
 
+import java.util.Scanner;
+
 class A
 {
 	private int x; // private- restricted access
@@ -22,7 +24,7 @@ public class SetterGetter
 	{
 		A obj=new A();
 		
-		obj.setX(5); // set value for x
+		obj.setX(11); // set value for x
 		System.out.println("Value of x: "+obj.getX()); // get value of x
 	}
 }
