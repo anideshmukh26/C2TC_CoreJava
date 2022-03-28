@@ -1,4 +1,4 @@
-// program to demonstrate that displays several awt components
+// program that displays several awt components
 
 package com.tns.day18;
 
