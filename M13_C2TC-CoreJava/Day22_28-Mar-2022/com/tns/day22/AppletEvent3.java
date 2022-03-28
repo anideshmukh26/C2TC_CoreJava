@@ -1,4 +1,4 @@
-// program to demonstrate addition, substraction, multiplication & division of numbers using action event
+// program to demonstrate simple calculator(addition, substraction, multiplication & division) using action event
 
 package com.tns.day22;
 
