@@ -2,26 +2,27 @@
 
 package com.tns.day17;
 
-import java.applet.Applet;		// importing applet class.
+import java.applet.Applet;		// importing applet class
 import java.awt.TextField;		// importing TextField & Button class of awt package.
 import java.awt.Button;
 
-public class AppletDemo extends Applet		// inherit Applet class 
+public class AppletDemo extends Applet		// inheriting Applet class 
 {
 	//variable declaration of Button & TextField class
-	Button b;
+	Button btn;
 	TextField tf;
 	
+	
 	public void init()
-	{
-		TextField tf = new TextField(20);		// initializing object of class TextField with argument for column size
-		Button b = new Button(" Submit ");		// initializing object of class Button with Label
+	{	
+		TextField tf = new TextField(25);		// initializing object of class TextField with argument for column size
+		Button btn = new Button(" Submit ");		// initializing object of class Button with Label
 		
-		// add method to add component
+		//call add method to add component in applet.
 		add(tf);
-		add(b);
+		add(btn);
 		
-		setSize(400,200);	 // setSize method to set size of applet
+		setSize(400,100);	 // call setSize method to set size of applet
 	}
 }	
 
