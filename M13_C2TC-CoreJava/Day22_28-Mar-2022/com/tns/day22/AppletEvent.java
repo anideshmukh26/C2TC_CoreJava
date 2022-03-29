@@ -27,10 +27,10 @@ public class AppletEvent extends Applet
 	}
 	public boolean action(Event e, Object o)		// overrides method action
 	{
-		if(e.target.equals(btn1))		// action event target on which event is performed & check for given object equal to b1
+		if(e.target.equals(btn1))		// event e target on which event is performed & equals check for given object is equal to btn1.
 			tf.setText(" Hello ");
 		
-		if(e.target.equals(btn2))		// action event target on which event is performed & check for given object equal to b2
+		if(e.target.equals(btn2))		// event e target on which event is performed & equals check for given object is equal to btn2.
 			tf.setText(" ");
 			
 		return true;		// return type of action
