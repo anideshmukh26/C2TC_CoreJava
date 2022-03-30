@@ -15,7 +15,7 @@ public class AppletComponent extends Applet
 	Button btn;
 	TextField tf;
 	Label lbl;
-	Checkbox cb;
+	Checkbox cb, cb1,cb2, cb3;
 	CheckboxGroup cbg;
 	Choice ch;
 	
@@ -34,9 +34,9 @@ public class AppletComponent extends Applet
 		add(cb);
 		
 		CheckboxGroup cbg = new CheckboxGroup();
-		add(new Checkbox("CB Item 1", cbg, false));
-		add(new Checkbox("CB Item 2", cbg, true));
-		add(new Checkbox("CB Item 3", cbg, false));
+		add(cb1 = new Checkbox("Item 1", cbg, false));
+		add(cb2 = new Checkbox("Item 2", cbg, true));
+		add(cb3 = new Checkbox("Item 3", cbg, false));
 		
 		Choice ch = new Choice();
 		ch.addItem("Choice Item 1");
