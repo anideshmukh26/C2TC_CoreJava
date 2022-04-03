@@ -7,11 +7,12 @@ import java.awt.Button;
 import java.awt.Checkbox;
 import java.awt.CheckboxGroup;
 import java.awt.Choice;
+import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.Label;
 import java.awt.TextArea;
 import java.awt.TextField;
-import java.awt.Component;
+
 
 public class AppletRegForm extends Applet 
 {
