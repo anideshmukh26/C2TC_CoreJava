@@ -1,4 +1,4 @@
-// program that demonstrate display of Multiplication table for numbers 1-10 in TextField on click of button
+// program that demonstrate Multiplication table for numbers 1-10 in TextField on click of button
 
 package com.tns.day25;
 
@@ -35,7 +35,7 @@ public class MyApplet extends Applet
 			 for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i;
-				 pnl2.tf.setText(" "+m);  
+				 pnl2.tf.setText(" "+m); 
 			 }
 		}
 		if(e.target.equals(pnl1.btn2))
