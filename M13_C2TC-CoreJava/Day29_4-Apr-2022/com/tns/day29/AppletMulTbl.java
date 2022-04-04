@@ -31,7 +31,7 @@ public class AppletMulTbl extends Applet
 		if(e.target.equals(pnl1.btn1))
 		{
 			int n = 1, m = 0;
-			pnl2.ta.setText(" Multiplication table for number 1: \n");
+			pnl2.ta.setText(" Multiplication table for number 1: \n");		//setText() method to set Text in TextArea.
 			for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i; 
