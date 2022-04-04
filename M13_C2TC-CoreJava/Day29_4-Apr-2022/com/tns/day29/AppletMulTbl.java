@@ -35,7 +35,7 @@ public class AppletMulTbl extends Applet
 			for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i; 
-				 pnl2.ta.append(" \n"+n+" * "+i+"  = "+m+" \n");
+				 pnl2.ta.append(" \n"+n+" * "+i+"  = "+m+" \n");		// overloaded append() method to append string in TextArea.
 			 }
 		}
 		if(e.target.equals(pnl1.btn2))
