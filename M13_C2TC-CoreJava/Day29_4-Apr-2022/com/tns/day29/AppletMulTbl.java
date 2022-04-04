@@ -1,6 +1,6 @@
 // program that demonstrate Multiplication table for numbers 1-10 in TextArea on click of button
 
-package com.tns.day25;
+package com.tns.day29;
 
 import java.applet.Applet;
 import java.awt.Button;
@@ -10,7 +10,7 @@ import java.awt.Panel;
 import java.awt.TextArea;
 
 
-public class MyApplet extends Applet
+public class AppletMulTbl extends Applet
 {
 	Panel1 pnl1;
 	Panel2 pnl2;
@@ -24,104 +24,104 @@ public class MyApplet extends Applet
 		
 		pnl2.ta.setEditable(false);
 		
-		setSize(400, 400);
+		setSize(450, 400);
 	}
 	public boolean action(Event e, Object o)
 	{
 		if(e.target.equals(pnl1.btn1))
 		{
-			int n = 1, m = 0; 
-			pnl2.ta.setText(" ");
-			 for(int i = 1; i <= 10; i++)
+			int n = 1, m = 0;
+			pnl2.ta.setText(" Multiplication table for number 1: \n");
+			for(int i = 1; i <= 10; i++)
 			 {
-				 m = n * i;
-				 pnl2.ta.append(" "+n+" * "+i+"  ="+m+"  \n"); 
+				 m = n * i; 
+				 pnl2.ta.append(" \n"+n+" * "+i+"  ="+m+" \n");
 			 }
 		}
 		if(e.target.equals(pnl1.btn2))
 		{
 			int n = 2, m = 0; 
-			pnl2.ta.setText(" ");
+			pnl2.ta.setText(" Multiplication table for number 2: \n");
 			 for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i;
-				 pnl2.ta.append(" "+n+" * "+i+"  ="+m+"  \n"); 
+				 pnl2.ta.append(" \n"+n+" * "+i+"  ="+m+"  \n"); 
 			 }
 		}
 		if(e.target.equals(pnl1.btn3))
 		{
 			int n = 3, m = 0; 
-			pnl2.ta.setText(" ");
+			pnl2.ta.setText(" Multiplication table for number 3: \n");
 			 for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i;
-				 pnl2.ta.append(" "+n+" * "+i+"  ="+m+"  \n");
+				 pnl2.ta.append(" \n"+n+" * "+i+"  ="+m+"  \n");
 			 }
 		}
 		if(e.target.equals(pnl1.btn4))
 		{
 			int n = 4, m = 0; 
-			pnl2.ta.setText(" ");
+			pnl2.ta.setText(" Multiplication table for number 4: \n");
 			 for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i;
-				 pnl2.ta.append(" "+n+" * "+i+"  ="+m+"  \n");  
+				 pnl2.ta.append(" \n"+n+" * "+i+"  ="+m+"  \n");  
 			 }
 		}
 		if(e.target.equals(pnl1.btn5))
 		{
 			int n = 5, m = 0; 
-			pnl2.ta.setText(" ");
+			pnl2.ta.setText(" Multiplication table for number 5: \n");
 			 for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i;
-				 pnl2.ta.append(" "+n+" * "+i+"  ="+m+"  \n");  
+				 pnl2.ta.append(" \n"+n+" * "+i+"  ="+m+"  \n");  
 			 }
 		}
 		if(e.target.equals(pnl1.btn6))
 		{
 			int n = 6, m = 0; 
-			pnl2.ta.setText(" ");
+			pnl2.ta.setText("  Multiplication table for number 6: \n");
 			 for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i;
-				 pnl2.ta.append(" "+n+" * "+i+"  ="+m+"  \n");  
+				 pnl2.ta.append(" \n"+n+" * "+i+"  ="+m+"  \n");  
 			 }
 		}
 		if(e.target.equals(pnl1.btn7))
 		{
 			int n = 7, m = 0; 
-			pnl2.ta.setText(" ");
+			pnl2.ta.setText("  Multiplication table for number 7: \n");
 			 for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i;
-				 pnl2.ta.append(" "+n+" * "+i+"  ="+m+"  \n");  
+				 pnl2.ta.append(" \n"+n+" * "+i+"  ="+m+"  \n");  
 			 }
 		}
 		if(e.target.equals(pnl1.btn8))
 		{
 			int n = 8, m = 0; 
-			pnl2.ta.setText(" ");
+			pnl2.ta.setText("  Multiplication table for number 8: \n");
 			 for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i;
-				 pnl2.ta.append(" "+n+" * "+i+"  ="+m+"  \n"); 
+				 pnl2.ta.append(" \n"+n+" * "+i+"  ="+m+"  \n"); 
 			 }
 		}
 		if(e.target.equals(pnl1.btn9))
 		{
 			int n = 9, m = 0; 
-			pnl2.ta.setText(" ");
+			pnl2.ta.setText("  Multiplication table for number 9: \n");
 			 for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i;
-				 pnl2.ta.append(" "+n+" * "+i+"  ="+m+"  \n");  
+				 pnl2.ta.append(" \n"+n+" * "+i+"  ="+m+"  \n");  
 			 }
 		}
 		if(e.target.equals(pnl1.btn10))
 		{
 			int n = 10, m = 0; 
-			pnl2.ta.setText(" ");
+			pnl2.ta.setText("  Multiplication table for number 10: \n");
 			 for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i;
@@ -159,6 +159,6 @@ class Panel2 extends Panel
 	{
 		setLayout(new GridLayout(1,1));
 		
-		add(ta = new TextArea());
+		add(ta = new TextArea(" Multiplication Table from 1-10 "));
 	}
 }
