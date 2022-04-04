@@ -26,5 +26,5 @@ class OverloadDemo
 	   ob.area(10);
 	   ob.area(5,8);
 	   ob.area(4.5);
-        }
+    }
 }
