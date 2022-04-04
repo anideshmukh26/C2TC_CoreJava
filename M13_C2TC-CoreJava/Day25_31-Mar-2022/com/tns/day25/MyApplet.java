@@ -5,10 +5,9 @@ package com.tns.day25;
 import java.applet.Applet;
 import java.awt.Button;
 import java.awt.Event;
-import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.Panel;
-import java.awt.TextField;
+import java.awt.TextArea;
 
 
 public class MyApplet extends Applet
@@ -23,7 +22,7 @@ public class MyApplet extends Applet
 		add(pnl1 = new Panel1());
 		add(pnl2 = new Panel2());
 		
-		pnl2.tf.setEditable(false);
+		pnl2.ta.setEditable(false);
 		
 		setSize(400, 400);
 	}
@@ -35,7 +34,8 @@ public class MyApplet extends Applet
 			 for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i;
-				 pnl2.tf.setText(" "+m); 
+				 pnl2.ta.setText(" "+n+" * "+i+"  =" +m+"   "); 
+				 System.out.println(" "+n+" * "+i+"  =" +m+"   ");
 			 }
 		}
 		if(e.target.equals(pnl1.btn2))
@@ -44,7 +44,7 @@ public class MyApplet extends Applet
 			 for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i;
-				 pnl2.tf.setText(" "+m);  
+				 pnl2.ta.setText(" "+n+" * "+i+"  =" +m+"   ");  
 			 }
 		}
 		if(e.target.equals(pnl1.btn3))
@@ -53,7 +53,7 @@ public class MyApplet extends Applet
 			 for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i;
-				 pnl2.tf.setText(" "+m);  
+				 pnl2.ta.setText(" "+n+" * "+i+"  =" +m+"   ");  
 			 }
 		}
 		if(e.target.equals(pnl1.btn4))
@@ -62,7 +62,7 @@ public class MyApplet extends Applet
 			 for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i;
-				 pnl2.tf.setText(" "+m);  
+				 pnl2.ta.setText(" "+n+" * "+i+"  =" +m+"   ");  
 			 }
 		}
 		if(e.target.equals(pnl1.btn5))
@@ -71,7 +71,7 @@ public class MyApplet extends Applet
 			 for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i;
-				 pnl2.tf.setText(" "+m);  
+				 pnl2.ta.setText(" "+n+" * "+i+"  =" +m+"   ");  
 			 }
 		}
 		if(e.target.equals(pnl1.btn6))
@@ -80,7 +80,7 @@ public class MyApplet extends Applet
 			 for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i;
-				 pnl2.tf.setText(" "+m);  
+				 pnl2.ta.setText(" "+n+" * "+i+"  =" +m+"   ");  
 			 }
 		}
 		if(e.target.equals(pnl1.btn7))
@@ -89,7 +89,7 @@ public class MyApplet extends Applet
 			 for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i;
-				 pnl2.tf.setText(" "+m);  
+				 pnl2.ta.setText(" "+n+" * "+i+"  =" +m+"   ");  
 			 }
 		}
 		if(e.target.equals(pnl1.btn8))
@@ -98,7 +98,7 @@ public class MyApplet extends Applet
 			 for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i;
-				 pnl2.tf.setText(" "+m);  
+				 pnl2.ta.setText(" "+n+" * "+i+"  =" +m+"   ");  
 			 }
 		}
 		if(e.target.equals(pnl1.btn9))
@@ -107,7 +107,7 @@ public class MyApplet extends Applet
 			 for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i;
-				 pnl2.tf.setText(" "+m);  
+				 pnl2.ta.setText(" "+n+" * "+i+"  =" +m+"   ");  
 			 }
 		}
 		if(e.target.equals(pnl1.btn10))
@@ -116,7 +116,7 @@ public class MyApplet extends Applet
 			 for(int i = 1; i <= 10; i++)
 			 {
 				 m = n * i;
-				 pnl2.tf.setText(" "+m);  
+				 pnl2.ta.setText(" "+n+" * "+i+"  =" +m+"   ");  
 			 }
 		}
 		return true;
@@ -144,12 +144,12 @@ class Panel1 extends Panel
 }
 class Panel2 extends Panel
 {
-	TextField tf;
+	TextArea ta;
 	
 	public Panel2()
 	{
 		setLayout(new GridLayout(1,1));
 		
-		add(tf = new TextField());
+		add(ta = new TextArea());
 	}
 }
