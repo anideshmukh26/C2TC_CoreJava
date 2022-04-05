@@ -4,25 +4,20 @@ package com.tns.day30;
 
 final class F
 {
-	
+	final int i=1;		// final variable having constant value		
+	i=2;		// we can't change value of final variable 		
 }
-class E extends F		// we can't inherit final class
+class G extends F		// we can't extends final class
 {
 	public final void speed()
 	{
 		
 	}
 }
-public class FinalDemo extends E
-{
+public class FinalDemo extends G
+{	
 	public final void speed()		// we can't override final method
 	{
 		
 	}
-	public static void main(String[]args)
-	{
-		final int i = 2;		// final variable with constant value
-		i = 5;		//we can't change the value of i
-	}
-
 }
