@@ -15,7 +15,7 @@ class G extends F		// we can't extends final class
 	}
 }
 public class FinalDemo extends G
-{	
+{
 	public final void speed()		// we can't override final method
 	{
 		
