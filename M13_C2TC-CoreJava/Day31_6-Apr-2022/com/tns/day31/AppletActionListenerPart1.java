@@ -1,4 +1,4 @@
-// program that demonstrates ActionListener Part 1
+// program that demonstrates ActionListener Part1 - Register Class's 1 object with two component btn1 & btn2.
 
 package com.tns.day31;
 
@@ -7,7 +7,6 @@ import java.awt.Button;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 
 //class inherits  Class Applet & Interface ActionListener
 public class AppletActionListenerPart1 extends Applet implements ActionListener		 
