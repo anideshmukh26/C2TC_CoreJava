@@ -1,6 +1,6 @@
-// program that demonstrates ActionListener Part-1 (class AppletActionListenerPart1 register with two component btn1 & btn2).
+// Program that demonstrates ActionListener Part-2 (class AppletActionListenerPart2 register btn1, Inner/nested class A register btn2).
 
-package com.tns.day31;
+package com.tns.day32;
 
 import java.applet.Applet;
 import java.awt.Button;
@@ -8,8 +8,7 @@ import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-//class inherits  class Applet & interface ActionListener
-public class AppletActionListenerPart1 extends Applet implements ActionListener		 
+public class AppletActionListenerPart2 extends Applet implements ActionListener
 {
 	Button btn1, btn2;
 	TextField tf;
@@ -22,14 +21,18 @@ public class AppletActionListenerPart1 extends Applet implements ActionListener
 		
 		// register component buttons with listener
 		btn1.addActionListener(this);		
-		btn2.addActionListener(this);		
+
+		btn2.addActionListener(new A());
 	}
 	public void actionPerformed(ActionEvent e)
 	{
-		Object o = e.getSource();
-		if(o.equals(btn1))
-			tf.setText(" Hello, My name is Aniket. ");
-		if(o.equals(btn2))
+		tf.setText(" Hello, My name is Aniket. ");
+	}
+	class A implements ActionListener		// Inner/nested Class A
+	{
+		public void actionPerformed(ActionEvent e)
+		{
 			tf.setText(" ");
+		}
 	}
 }
