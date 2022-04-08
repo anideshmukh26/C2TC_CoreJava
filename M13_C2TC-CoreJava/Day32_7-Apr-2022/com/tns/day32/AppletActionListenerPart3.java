@@ -22,24 +22,27 @@ public class AppletActionListenerPart3 extends Applet implements ActionListener
 		// register component buttons with listener
 		btn1.addActionListener(this);
 		
-		B b= new B(this);
-		btn2.addActionListener(b);		
+		//B b= new B(this);
+		btn2.addActionListener(new B());	
+		
 	}
 	public void actionPerformed(ActionEvent e)
 	{
 		tf.setText(" Hello, My name is Aniket. ");
 	}
 }
-class B implements ActionListener
+class B  implements ActionListener
 {
-	AppletActionListenerPart3 al;
+	/*AppletActionListenerPart3 al;
 	
 	B(AppletActionListenerPart3 al)
 	{
 		this.al = al;
-	}
-	public void actionPerformed(ActionEvent arg0) 
+	} */
+	
+	AppletActionListenerPart3 ap = new AppletActionListenerPart3();
+	public void actionPerformed(ActionEvent e) 
 	{
-		al.tf.setText(" ");
-	}
+		ap.tf.setText(" ");
+	} 
 }

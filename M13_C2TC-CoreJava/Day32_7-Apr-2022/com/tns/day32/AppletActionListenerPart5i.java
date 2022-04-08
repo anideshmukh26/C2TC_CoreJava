@@ -1,4 +1,4 @@
-// Program that demonstrates ActionListener Part-5i (Anonymous class).
+// Program that demonstrates ActionListener Part-5i (Anonymous inner class).
 
 package com.tns.day32;
 
