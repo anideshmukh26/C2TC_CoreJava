@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 public class AppletActionListenerPart4 extends Applet
 {
 	Button btn1, btn2;
-	TextField tf;
+	static TextField tf;
 	
 	public void init() 
 	{
@@ -22,34 +22,22 @@ public class AppletActionListenerPart4 extends Applet
 		//C b = new C(this);
 		//D d = new D(this);
 		
-		btn1.addActionListener(new C(this));
+		btn1.addActionListener(new C());
 		
-		btn2.addActionListener(new D(this));
+		btn2.addActionListener(new D());
 	}
 }
 class C implements ActionListener
 {
-	AppletActionListenerPart4 al;
-	
-	C(AppletActionListenerPart4 al)
-	{
-		this.al=al;
-	}
 	public void actionPerformed(ActionEvent e)
 	{
-		al.tf.setText(" Hello, My name is Aniket. ");
+		AppletActionListenerPart4.tf.setText(" Hello, My name is Aniket. ");
 	}
 }
 class D implements ActionListener
 {
-	AppletActionListenerPart4 al;
-	
-	D(AppletActionListenerPart4 al)
-	{
-		this.al=al;
-	}
 	public void actionPerformed(ActionEvent e)
 	{
-		al.tf.setText(" ");
+		AppletActionListenerPart4.tf.setText(" ");
 	}
 }
