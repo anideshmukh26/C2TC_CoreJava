@@ -1,4 +1,4 @@
-// Program that demonstrates ActionEvent using declaring variable as static & using this keyword
+// Program that demonstrates ActionEvent by declaring variable as static & using this keyword
 
 package com.tns.day33;
 
