@@ -21,7 +21,7 @@ public class AppletActionListenerPart5i extends Applet
 		
 		// register component buttons with listener
 		btn1.addActionListener(new ActionListener()		
-		{														// Anonymous class
+		{														// Anonymous inner class
 			public void actionPerformed(ActionEvent e)
 			{
 				tf.setText(" Hello, My name is Aniket. ");
@@ -30,7 +30,7 @@ public class AppletActionListenerPart5i extends Applet
 		
 		
 		btn2.addActionListener(new ActionListener()		
-		{														// Anonymous class
+		{														// Anonymous inner class
 			public void actionPerformed(ActionEvent e)
 			{
 				tf.setText(" ");

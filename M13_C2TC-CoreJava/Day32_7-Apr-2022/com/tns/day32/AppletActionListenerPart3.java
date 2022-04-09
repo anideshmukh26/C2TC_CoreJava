@@ -1,4 +1,4 @@
-// Program that demonstrates ActionListener Part-3 (class AppletActionListenerPart4 register btn1, Outside class B register btn2).
+// Program that demonstrates ActionListener Part-3 (class AppletActionListenerPart3 register btn1, Outside class B register btn2).
 
 package com.tns.day32;
 
@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 public class AppletActionListenerPart3 extends Applet implements ActionListener
 {
 	Button btn1, btn2;
-	static TextField tf;
+	TextField tf;
 	
 	public void init() 
 	{
@@ -22,9 +22,8 @@ public class AppletActionListenerPart3 extends Applet implements ActionListener
 		// register component buttons with listener
 		btn1.addActionListener(this);
 		
-		//B b= new B(this);
-		btn2.addActionListener(new B());	
-		
+		B b= new B(this);
+		btn2.addActionListener(b); 		
 	}
 	public void actionPerformed(ActionEvent e)
 	{
@@ -33,16 +32,14 @@ public class AppletActionListenerPart3 extends Applet implements ActionListener
 }
 class B implements ActionListener
 {
-	/*AppletActionListenerPart3 al;
+	AppletActionListenerPart3 al;
 	
 	B(AppletActionListenerPart3 al)
 	{
 		this.al = al;
-	} */
-	
-	// AppletActionListenerPart3 ap = new AppletActionListenerPart3();
-	public void actionPerformed(ActionEvent e) 
+	}
+	public void actionPerformed(ActionEvent arg0) 
 	{
-		AppletActionListenerPart3.tf.setText(" ");
-	} 
+		al.tf.setText(" ");
+	}
 }

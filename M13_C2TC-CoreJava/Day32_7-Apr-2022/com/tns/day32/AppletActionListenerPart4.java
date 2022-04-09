@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 public class AppletActionListenerPart4 extends Applet
 {
 	Button btn1, btn2;
-	static TextField tf;
+	TextField tf;
 	
 	public void init() 
 	{
@@ -19,25 +19,42 @@ public class AppletActionListenerPart4 extends Applet
 		add(tf = new TextField(20));
 		add(btn2 = new Button(" Clear "));
 	
-		//C b = new C(this);
-		//D d = new D(this);
+		C c = new C();
+		c.takeRef(this);				
 		
-		btn1.addActionListener(new C());
-		
-		btn2.addActionListener(new D());
+		btn1.addActionListener(c);					// passing class C instance by variable c
+		btn2.addActionListener(new D(this));		// passing class D instance
 	}
 }
 class C implements ActionListener
 {
+	AppletActionListenerPart4 a;
+	
+	public void takeRef(AppletActionListenerPart4 ap)		// using takeRef() method
+	{
+		a=ap;
+	}
+	
+	/*C(AppletActionListenerPart4 al)
+	{
+		this.al=al;
+	} */
+	
 	public void actionPerformed(ActionEvent e)
 	{
-		AppletActionListenerPart4.tf.setText(" Hello, My name is Aniket. ");
+		a.tf.setText(" Hello, My name is Aniket. ");
 	}
 }
 class D implements ActionListener
 {
+	AppletActionListenerPart4 al;
+	
+	D(AppletActionListenerPart4 al)		
+	{
+		this.al=al;						// using reference variable this 
+	}
 	public void actionPerformed(ActionEvent e)
 	{
-		AppletActionListenerPart4.tf.setText(" ");
+		al.tf.setText(" ");
 	}
 }
