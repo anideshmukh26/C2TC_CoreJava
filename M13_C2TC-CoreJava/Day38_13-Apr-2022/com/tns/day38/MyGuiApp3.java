@@ -13,24 +13,28 @@ import java.awt.event.WindowEvent;
 
 public class MyGuiApp3 extends Frame
 {
-	Checkbox cb1, cb2, cb3, cb4;
+	Checkbox cb1, cb2, cb3, cb4, cb5, cb6;
 	TextField tf;
 	
 	public MyGuiApp3()
 	{
 		setTitle(" My Gui App3 ");
-		setLayout(new GridLayout(3,2));	
+		setLayout(new GridLayout(3,3));	
 		
 		add(cb1 = new Checkbox(" 1 "));
 		add(cb2 = new Checkbox(" 2 "));
 		add(cb3 = new Checkbox(" 3 "));
 		add(cb4 = new Checkbox(" 4 "));
+		add(cb5 = new Checkbox(" 5 "));
+		add(cb6 = new Checkbox(" 6 "));
 		add(tf = new TextField());
 		
 		cb1.addItemListener(new A());
 		cb2.addItemListener(new A());
 		cb3.addItemListener(new A());
 		cb4.addItemListener(new A());
+		cb5.addItemListener(new A());
+		cb6.addItemListener(new A());
 		
 		addWindowListener(new WindowAdapter() 
 		{
@@ -58,6 +62,10 @@ public class MyGuiApp3 extends Frame
 				sum = sum + 3;
 			if(cb4.getState())
 				sum = sum + 4;
+			if(cb5.getState())
+				sum = sum + 5;
+			if(cb6.getState())
+				sum = sum + 6;
 			
 			tf.setText(String.valueOf(sum));
 		}

@@ -30,25 +30,26 @@ public class MyGuiApp1 extends Frame
 		add(btn2 = new Button(" Clear "));
 		
 		btn1.addActionListener(new ActionListener()
-				{
-					public void actionPerformed(ActionEvent e)
-					{
-						int a = Integer.parseInt( tf1.getText());
-						int b = Integer.parseInt(tf2.getText());
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				int a = Integer.parseInt( tf1.getText());
+				int b = Integer.parseInt(tf2.getText());
 						
-						int sum = a+b;
-						tf3.setText(" "+sum);
-					}
-				});
+				int sum = a+b;
+				tf3.setText(" "+sum);
+			}
+		});
 		btn2.addActionListener(new ActionListener()
-				{
-					public void actionPerformed(ActionEvent e)
-					{
-						tf1.setText(" ");
-						tf2.setText(" ");
-						tf3.setText(" ");
-					}
-				});
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				tf1.setText(" ");
+				tf2.setText(" ");
+				tf3.setText(" ");
+			}
+		});
+		
 		addWindowListener(new WindowAdapter() 
 		{
 			@Override
