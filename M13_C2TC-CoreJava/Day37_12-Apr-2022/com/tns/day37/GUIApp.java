@@ -17,7 +17,7 @@ public class GUIApp extends Frame
 	public GUIApp()
 	{
 		setLayout(new FlowLayout());
-		setTitle("My GUI App");
+		setTitle(" My GUI App ");
 		
 		add(btn1 = new Button(" Click "));
 		add(tf = new TextField(20));

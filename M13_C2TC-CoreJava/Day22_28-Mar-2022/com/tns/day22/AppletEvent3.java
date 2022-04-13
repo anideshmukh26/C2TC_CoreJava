@@ -27,7 +27,6 @@ public class AppletEvent3 extends Applet
 		add(btn2 = new Button(" SUB "));
 		add(btn3 = new Button(" MUL "));
 		add(btn4 = new Button(" DIV "));
-		
 		add(btn5 = new Button(" Clear "));
 		
 		setSize(450, 200);
