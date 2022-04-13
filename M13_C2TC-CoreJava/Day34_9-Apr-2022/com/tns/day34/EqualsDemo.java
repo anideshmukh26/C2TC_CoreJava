@@ -19,7 +19,7 @@ public class EqualsDemo
 		}
 		if(num3 == num1)
 		{
-			System.out.println(" num3 & num1 are equal. ");
+			System.out.println(" num1 & num3 are equal. ");
 		}else
 		{
 			System.out.println(" num1 & num3 are not equal. ");
