@@ -11,7 +11,7 @@ import java.awt.event.ItemListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class MyGuiApp3 extends Frame
+public class MyGuiApp3 extends Frame implements ItemListener
 {
 	Checkbox cb1, cb2, cb3, cb4, cb5, cb6;
 	TextField tf;
@@ -29,12 +29,12 @@ public class MyGuiApp3 extends Frame
 		add(cb6 = new Checkbox(" 6 "));
 		add(tf = new TextField());
 		
-		cb1.addItemListener(new A());
-		cb2.addItemListener(new A());
-		cb3.addItemListener(new A());
-		cb4.addItemListener(new A());
-		cb5.addItemListener(new A());
-		cb6.addItemListener(new A());
+		cb1.addItemListener(this);
+		cb2.addItemListener(this);
+		cb3.addItemListener(this);
+		cb4.addItemListener(this);
+		cb5.addItemListener(this);
+		cb6.addItemListener(this);
 		
 		addWindowListener(new WindowAdapter() 
 		{
@@ -48,27 +48,24 @@ public class MyGuiApp3 extends Frame
 		setSize(300, 300);
 		setVisible(true);
 	}
-	class A implements ItemListener
+	public void itemStateChanged(ItemEvent e) 
 	{
-		public void itemStateChanged(ItemEvent e) 
-		{
-			int sum = 0;
-			
-			if(cb1.getState())	
-				sum = sum + 1;
-			if(cb2.getState())
-				sum = sum + 2;
-			if(cb3.getState())
-				sum = sum + 3;
-			if(cb4.getState())
-				sum = sum + 4;
-			if(cb5.getState())
-				sum = sum + 5;
-			if(cb6.getState())
-				sum = sum + 6;
-			
-			tf.setText(String.valueOf(sum));
-		}
+		int sum = 0;
+		
+		if(cb1.getState())	
+			sum = sum + 1;
+		if(cb2.getState())
+			sum = sum + 2;
+		if(cb3.getState())
+			sum = sum + 3;
+		if(cb4.getState())
+			sum = sum + 4;
+		if(cb5.getState())
+			sum = sum + 5;
+		if(cb6.getState())
+			sum = sum + 6;
+		
+		tf.setText(String.valueOf(sum));
 	}
 	public static void main(String[] args) 
 	{

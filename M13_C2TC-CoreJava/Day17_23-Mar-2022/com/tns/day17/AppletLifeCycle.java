@@ -11,7 +11,7 @@ public class AppletLifeCycle extends Applet
 	{
 		System.out.println(" Applet initialized.");
 		
-		setSize(300,200); // sets the size of applet
+		setSize(400,200); // sets the size of applet
 	}
 	public void start()
 	{
@@ -21,7 +21,7 @@ public class AppletLifeCycle extends Applet
 	{
 		System.out.println(" Applet Stoped.");
 	}
-	public void paint(Graphics g) // paint method with Graphic class
+	public void paint(Graphics g) // paint method with Graphic class (this method is not mandatory part of life cycle).
 	{
 		g.drawString(" Applet started & following the life cycle.",50,50);		// method drawString(String,int,int)
 	}
