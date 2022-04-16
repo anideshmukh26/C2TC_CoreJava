@@ -22,8 +22,7 @@ public class ArrayDemoPolygon extends Frame
 		{
 			x[i] = (int) (300*Math.random());
 			y[i] = (int) (300*Math.random());
-		}
-		
+		} 
 		addWindowListener(new WindowAdapter()
 		{
 			@Override

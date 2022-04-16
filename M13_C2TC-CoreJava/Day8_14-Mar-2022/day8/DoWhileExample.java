@@ -12,6 +12,6 @@ public class DoWhileExample
 			System.out.print(" "+i);
 			i++;
 		}
-		while(i<=15); // condition
+		while(i>=15); // condition execute at least once if condition fails.
 	}
 }
