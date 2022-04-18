@@ -11,7 +11,8 @@ public class ForEachDemo
 		
 		System.out.print("Ages of the group are : ");
 		
-		for (int x : ages)						// In for-each loop does not need the number of iterations to be specified.
+		// for-each loop doesn't need the number of iterations to be specified. It counted automatically as per length of array.
+		for (int x : ages)						
 		{
 			System.out.print(x+" ");
 			sum = sum + x;
