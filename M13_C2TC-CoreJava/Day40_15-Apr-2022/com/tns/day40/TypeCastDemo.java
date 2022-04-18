@@ -47,7 +47,6 @@ public class TypeCastDemo
 {
 	public static void main(String[] args) 
 	{
-		//Maruti m = new Maruti();
 		Car c = new Maruti();		// Up casting
 		Maruti m = (Maruti) c;		// down casting
 	
