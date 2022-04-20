@@ -1,44 +1,18 @@
-// Program that demonstrates Thread in Application.
+// Program that demonstrates Thread by implementing Runnable interface.
 
 package com.tns.day44;
 
-import java.awt.FlowLayout;
-import java.awt.Frame;
-import java.awt.TextField;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-
-public class ThreadDemo2 extends Frame implements Runnable
+public class ThreadDemo2 implements Runnable 
 {
-	TextField tf1, tf2;
-	
-	public ThreadDemo2()
+	public void run()
 	{
-		setLayout(new FlowLayout());
-		
-		add(tf1 = new TextField(20));
-		add(tf2 = new TextField(20));
-		
-		
-		addWindowListener(new WindowAdapter() 
-		{
-			@Override
-			public void windowClosing(WindowEvent e)
-			{
-				System.exit(0);
-			}
-		});
-		
-		setSize(300, 300);
-		setVisible(true);
-	}
-	public void run() 
-	{
-		
+		System.out.println("My name is Aniket");
 	}
 	public static void main(String[] args)
 	{
-		new ThreadDemo2();
+		//ThreadDemo th = new ThreadDemo();	
+		Thread t = new Thread(new ThreadDemo2());  // Using the constructor Thread(Runnable r)  
+		t.start();
+		System.out.println(t.getName());		// To get name of thread
 	}
-
 }
