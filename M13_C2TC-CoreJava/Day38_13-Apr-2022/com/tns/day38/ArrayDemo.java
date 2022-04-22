@@ -4,10 +4,10 @@ package com.tns.day38;
 
 public class ArrayDemo 
 {    
+	int[] array;				// Declares an array of integers (1-Dimensional Array)
+	
 	ArrayDemo()
 	{
-		int[] array;		// Declares an array of integers (1-Dimensional Array)
-		 
 		 array = new int[5];		// Create an array of size/length 5
 		 
 		 // Initialization of an array
