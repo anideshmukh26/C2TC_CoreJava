@@ -2,9 +2,9 @@
 
 package com.tns.day50;
 
-class NonSyncMethod1
+class NonSyncMethod
 {
-    public synchronized void printNumbers()
+    public void printNumbers()
     {
         System.out.println("Starting to print Numbers for " + Thread.currentThread().getName());
 
@@ -15,11 +15,11 @@ class NonSyncMethod1
         System.out.println("Completed printing Numbers for " + Thread.currentThread().getName());
     }
 }
-class ThreadOne1 extends Thread 
+class ThreadOne extends Thread 
 {
-	NonSyncMethod1 nsm;
+	NonSyncMethod nsm;
 
-    public ThreadOne1(NonSyncMethod1 nsm) 
+    public ThreadOne(NonSyncMethod nsm) 
     {
         this.nsm = nsm;
        
@@ -31,11 +31,11 @@ class ThreadOne1 extends Thread
         nsm.printNumbers();
     }
 }
-class ThreadTwo2 extends Thread 
+class ThreadTwo extends Thread 
 {
-	NonSyncMethod1 nsm;
+	NonSyncMethod nsm;
 
-    public ThreadTwo2(NonSyncMethod1 nsm) 
+    public ThreadTwo(NonSyncMethod nsm) 
     {
         this.nsm = nsm;
         
@@ -47,13 +47,13 @@ class ThreadTwo2 extends Thread
        nsm.printNumbers();
     }
 }
-public class SyncDemo3 
+public class SyncDemo2 
 {
 	 public static void main(String[] args)
 	 {
-		 NonSyncMethod1 nsm = new NonSyncMethod1();
+		 NonSyncMethod nsm = new NonSyncMethod();
 		 
-		 new ThreadOne1(nsm);
-		 new ThreadTwo2(nsm);
+		 new ThreadOne(nsm);
+		 new ThreadTwo(nsm);
 	 }
 }
