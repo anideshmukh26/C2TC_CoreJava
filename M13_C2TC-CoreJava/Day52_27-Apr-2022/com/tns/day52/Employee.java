@@ -51,7 +51,8 @@ public class Employee
 	@Override
 	public boolean equals(Object o)
 	{
-		
+		o = new Employee();
+		Employee emp = (Employee)o;
 		return true;
 	}
 }

@@ -22,7 +22,7 @@ public class VectorDemo
 		
 		// checks logical equality. (Content) 
 		System.out.println(v1.contains(s2));		// returns true.			
-		System.out.println(v1.contains(e2));
+		System.out.println(v1.contains(e2));		// returns true.
 	}
 }
  
