@@ -1,4 +1,4 @@
-
+// class Employee for class VectorDemo.
 
 package com.tns.day52;
 
@@ -23,36 +23,44 @@ public class Employee
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(int id)
+	{
 		this.id = id;
 	}
 
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(String name) 
+	{
 		this.name = name;
 	}
 
-	public double getSalary() {
+	public double getSalary()
+	{
 		return salary;
 	}
 
-	public void setSalary(double salary) {
+	public void setSalary(double salary)
+	{
 		this.salary = salary;
 	}
 
 	@Override
-	public String toString() {
+	public String toString() 
+	{
 		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + "]";
 	}
 
 	@Override
 	public boolean equals(Object o)
 	{
-		o = new Employee();
-		Employee emp = (Employee)o;
-		return true;
+		if(o instanceof Employee)
+		{
+			return ((Employee)o).id == this.id;			// checks equality of employee id.
+		}
+		return false; 
 	}
 }

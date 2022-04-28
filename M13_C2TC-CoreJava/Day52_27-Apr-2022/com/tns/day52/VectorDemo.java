@@ -1,4 +1,4 @@
-
+// Program that demonstrates Vector of Collection Framework.
 
 package com.tns.day52;
 
@@ -16,13 +16,15 @@ public class VectorDemo
 		
 		Employee e1 = new Employee(1, "Aniket", 21000);
 		Employee e2 = new Employee(1, "Aniket", 21000);
+		Employee e3 = new Employee(2, "Rushi", 15000);
 		
 		v1.add(s1);
 		v2.add(e1);
 		
-		// checks logical equality. (Content) 
-		System.out.println(v1.contains(s2));		// returns true.			
-		System.out.println(v1.contains(e2));		// returns true.
+		// Vector checks logical equality (Content/ data). 
+		System.out.println(v1.contains(s2));		// return true.			
+		System.out.println(v2.contains(e2));		// return true.
+		System.out.println(v2.contains(e3));		// return false.
 	}
 }
  
