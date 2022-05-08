@@ -10,7 +10,6 @@ abstract class Demo  // abstract class
 	{
 		System.out.println("Everyone");
 	}
-	
 	abstract void myMethod3();
 }
 class Ex extends Demo     // inherit the parent abstract class to provide implementation to its abstract methods
