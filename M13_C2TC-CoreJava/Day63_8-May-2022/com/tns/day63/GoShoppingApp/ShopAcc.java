@@ -1,5 +1,6 @@
 
-package com.GoShopApp;
+
+package com.tns.day63.GoShoppingApp;
 
 public abstract class ShopAcc
 {
@@ -119,3 +120,4 @@ class NormalAcc extends ShopAcc
 		return deliveryCharges;
 	}
 }
+
