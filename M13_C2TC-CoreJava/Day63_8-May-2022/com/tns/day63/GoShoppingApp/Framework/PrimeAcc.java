@@ -1,6 +1,6 @@
 
 
-package com.tns.day63.Framework;
+package com.tns.day63.GoShoppingApp.Framework;
 
 public class PrimeAcc extends ShopAcc
 {
