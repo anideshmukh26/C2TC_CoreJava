@@ -9,11 +9,12 @@ public class PrimeAcc extends ShopAcc
 	
 	public PrimeAcc() {}
 	
-	public PrimeAcc(boolean isPrime)
+	public PrimeAcc(int accNo, String accNm, float charges, boolean isPrime)
 	{
-		this.isPrime = isPrime;
+		super(accNo, accNm, charges);
+		this.isPrime = isPrime;	
 	}
-
+	
 	@Override
 	public void bookProduct(float f)
 	{
@@ -23,8 +24,8 @@ public class PrimeAcc extends ShopAcc
 	@Override
 	public String toString() 
 	{
-		return "PrimeAcc [isPrime=" + isPrime + "]";
-	}
+		return "PrimeAcc [isPrime=" + isPrime + "]"; 
+	} 
 
 	public boolean isPrime() 
 	{

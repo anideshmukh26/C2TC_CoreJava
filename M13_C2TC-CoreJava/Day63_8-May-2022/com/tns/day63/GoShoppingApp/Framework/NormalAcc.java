@@ -4,9 +4,14 @@ package com.tns.day63.GoShoppingApp.Framework;
 
 public class  NormalAcc extends ShopAcc
 {
-	private final float deliveryCharges = 0;
+	private final float deliveryCharges = 40;
 	
 	public NormalAcc() {}
+	
+	public NormalAcc(int accNo, String accNm, float charges, float deliveryCharges) 
+	{
+		super(accNo, accNm, charges);
+	}
 	
 	@Override
 	public void bookProduct(float f)

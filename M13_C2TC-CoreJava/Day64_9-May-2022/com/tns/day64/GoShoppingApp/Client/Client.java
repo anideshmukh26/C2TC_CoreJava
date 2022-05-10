@@ -1,10 +1,9 @@
 
+package com.tns.day64.GoShoppingApp.Client;
 
-package com.Client;
-
-import com.Application.GSNormalAcc;
-import com.Application.GSPrimeAcc;
-import com.Application.GSShopFactory;
+import com.tns.day64.GoShoppingApp.Application.GSNormalAcc;
+import com.tns.day64.GoShoppingApp.Application.GSPrimeAcc;
+import com.tns.day64.GoShoppingApp.Application.GSShopFactory;
 
 public class Client
 {
