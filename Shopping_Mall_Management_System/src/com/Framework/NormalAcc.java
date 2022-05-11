@@ -13,7 +13,7 @@ public class  NormalAcc extends ShopAcc
 	}
 	
 	@Override
-	public void bookProduct(float f)
+	public void bookProduct(float charges)
 	{
 		
 	}

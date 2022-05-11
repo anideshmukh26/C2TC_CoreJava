@@ -16,12 +16,12 @@ public abstract class ShopAcc
 		this.accNm = accNm;
 		this.charges = charges;
 	}
-	public void bookProduct(float f)
+	public void bookProduct(float charges)
 	{
 		
 	}
 	
-	public void items(float f)
+	public void items(float charges)
 	{
 		
 	}

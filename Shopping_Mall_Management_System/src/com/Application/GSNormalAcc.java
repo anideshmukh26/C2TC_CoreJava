@@ -13,7 +13,7 @@ public class GSNormalAcc extends NormalAcc
 	}
 
 	@Override
-	public void bookProduct(float f)
+	public void bookProduct(float charges)
 	{
 		
 	}

@@ -11,8 +11,8 @@ public class Client
 	public static void main(String[] args)
 	{
 		GSShopFactory gssfactory = new GSShopFactory();
-		gssfactory.getNewPrimeAccount(1001,"Aniket", 499, true);
-		gssfactory.getNewNormalAccount(1201,"Rushi" , 499, 40);
+		gssfactory.getNewPrimeAcc(1001,"Aniket", 499, true);
+		gssfactory.getNewNormalAcc(1201,"Rushi" , 499, 40);
 		
 		GSPrimeAcc gsprime = new GSPrimeAcc();
 		gsprime.getAccNm();

@@ -16,7 +16,7 @@ public class GSPrimeAcc extends PrimeAcc
 	}
 	
 	@Override
-	public void bookProduct(float f)
+	public void bookProduct(float charges)
 	{
 		
 	}
@@ -24,6 +24,6 @@ public class GSPrimeAcc extends PrimeAcc
 	@Override
 	public String toString() 
 	{
-		return "GSPrimeAcc [Dear Prime User your product charges are : "+ charges +"]";
+		return "GSPrimeAcc [Charges : "+ charges +"]";
 	}
 }
