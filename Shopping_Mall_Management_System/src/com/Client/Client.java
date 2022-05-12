@@ -22,13 +22,13 @@ public class Client
 		gsprime.bookProduct(700);
 		gsprime.toString();
 		
-		GSNormalAcc gsnormal = new GSNormalAcc();
+		/*GSNormalAcc gsnormal = new GSNormalAcc();
 		gsnormal.getAccNm();
 		gsnormal.getAccNo();
 		gsnormal.getCharges();
 		gsnormal.getDeliveryCharges();
 		
 		gsnormal.bookProduct(700);
-		gsnormal.toString();
+		gsnormal.toString(); */
 	}
 }

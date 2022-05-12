@@ -6,7 +6,7 @@ import com.Framework.PrimeAcc;
 
 public class GSPrimeAcc extends PrimeAcc
 {
-	private static final float charges = 199;
+	private static final float Charges = 199;
 
 	public GSPrimeAcc() {}
 	
@@ -24,6 +24,6 @@ public class GSPrimeAcc extends PrimeAcc
 	@Override
 	public String toString() 
 	{
-		return "GSPrimeAcc [Charges : "+ charges +"]";
+		return "GSPrimeAcc [Charges : "+ Charges +"]";
 	}
 }

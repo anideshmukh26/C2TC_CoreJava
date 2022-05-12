@@ -21,6 +21,6 @@ public class GSNormalAcc extends NormalAcc
 	@Override
 	public String toString()
 	{
-		return "GSNormalAcc []";
+		return super.toString()+"GSNormalAcc []";
 	}	
 }

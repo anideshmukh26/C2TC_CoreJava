@@ -71,5 +71,8 @@
 	<classpathentry kind="src" path="Day63_8-May-2022"/>
 	<classpathentry kind="src" path="Day64_9-May-2022"/>
 	<classpathentry kind="src" path="Day65_10-May-2022"/>
+	<classpathentry kind="src" path="Day66_11-May-2022"/>
+	<classpathentry kind="src" path="Day67_12-May-2022"/>
+	<classpathentry kind="lib" path="D:/Aniket/TNS C2CT Program 23-02-2022/Hibernate/mysql-connector-java-8.0.13.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
