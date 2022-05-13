@@ -1,11 +1,15 @@
 
+
 package com.tns.day67;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.Statement;
 
-public class EmployeePreparedStatementInsertDemo
+public class EmployeePreparedStatementDeleteDemo 
 {
 	public static void main(String[] args) 
 	{
@@ -18,16 +22,12 @@ public class EmployeePreparedStatementInsertDemo
 			
 			con =DriverManager.getConnection("jdbc:mysql://localhost:3306/b3tns","root","1234");
 			
-			pt= con.prepareStatement("insert into emp values(?,?,?,?)");
-			pt.setInt(1, 2);
-			pt.setString(2, "Ajay");
-			pt.setDouble(3, 40000.00);
-			pt.setInt(4,2134566790);
-			
+			pt= con.prepareStatement(" delete from emp where empId = 1");
+	
 			int i = pt.executeUpdate();
 			
 			System.out.println("No.of rows affected : "+i);
-			System.out.println("\nRows insterted successfully..!!");	
+			System.out.println("\nRows deleted successfully..!!");	
 		}
 		catch(Exception e)
 		{

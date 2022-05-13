@@ -10,7 +10,7 @@ public class  NormalAcc extends ShopAcc
 	
 	public NormalAcc(int accNo, String accNm, float charges, float deliveryCharges) 
 	{
-		super(accNo, accNm, charges);
+		super(accNo, accNm, charges);	
 	}
 	
 	@Override

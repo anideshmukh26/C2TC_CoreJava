@@ -1,6 +1,6 @@
 
 
-package com.tns.day67;
+package com.tns.day66;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.Statement;
 
-public class StatementResultSetDemo 
+public class StudentStatementResultSetDemo
 {
 	public static void main(String args[])
 	{
