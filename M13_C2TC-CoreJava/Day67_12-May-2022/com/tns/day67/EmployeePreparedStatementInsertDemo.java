@@ -1,12 +1,11 @@
 
-
 package com.tns.day67;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-public class StudentPreparedStatementUpdateDemo 
+public class EmployeePreparedStatementInsertDemo
 {
 	public static void main(String[] args) 
 	{
@@ -19,12 +18,16 @@ public class StudentPreparedStatementUpdateDemo
 			
 			con =DriverManager.getConnection("jdbc:mysql://localhost:3306/b3tns","root","1234");
 			
-			pt= con.prepareStatement(" update emp set empName = 'Ankita' where empId = 1");
-	
+			pt= con.prepareStatement("insert into emp values(?,?,?,?)");
+			pt.setInt(1, 1);
+			pt.setString(2, "Vinu");
+			pt.setDouble(3, 35000.00);
+			pt.setInt(4,1234567890);
+			
 			int i = pt.executeUpdate();
 			
 			System.out.println("No.of rows affected : "+i);
-			System.out.println("\nRows updated successfully..!!");	
+			System.out.println("\nRows insterted successfully..!!");	
 		}
 		catch(Exception e)
 		{

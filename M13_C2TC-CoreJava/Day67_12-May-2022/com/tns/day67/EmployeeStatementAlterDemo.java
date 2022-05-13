@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 import java.util.Properties;
 
-public class StudentStatementAlterDemo 
+public class EmployeeStatementAlterDemo 
 {
 	public static void main(String[] args) throws Exception
 	{
