@@ -1,10 +1,10 @@
 
 
-package com.Customer;
+package com.tns.day65.MMBankApp.Customer;
 
-import com.Application.MMBankFactory;
-import com.Application.MMCurrentAcc;
-import com.Application.MMSavingAcc;
+import com.tns.day65.MMBankApp.Application.MMBankFactory;
+import com.tns.day65.MMBankApp.Application.MMCurrentAcc;
+import com.tns.day65.MMBankApp.Application.MMSavingAcc;
 
 public class Customer
 {
