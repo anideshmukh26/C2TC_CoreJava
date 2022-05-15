@@ -16,7 +16,6 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
-
 @Entity																							// To match entity
 
 @Table(name = "employee") 																		// Step 1- To create Table
