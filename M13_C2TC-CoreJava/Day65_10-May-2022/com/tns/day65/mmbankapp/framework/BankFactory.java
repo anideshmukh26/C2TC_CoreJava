@@ -1,0 +1,10 @@
+
+
+package com.tns.day65.mmbankapp.framework;
+
+public interface BankFactory 
+{
+	public abstract SavingAcc getNewSavingAcc(int accNo, String accNm, float accBal, boolean isSalaried);
+	public abstract CurrentAcc getNewCurrentAcc(int accNo, String accNm, float accBal, float creditLimit);
+}
+
