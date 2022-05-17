@@ -13,7 +13,7 @@ public class HibernateSingleTableInheritance
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("JPA-PU");		// Developed connection with database
 
 		EntityManager em = factory.createEntityManager();										// Operation on database & create update insert delete got object for communication
-		em.getTransaction();																	// Start communication
+		em.getTransaction().begin();																	// Start communication
 		
 		Employee e = new Employee();
 		e.setEmpName("Bhavesh");
