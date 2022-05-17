@@ -23,7 +23,7 @@ public class StudentStatementCreateDemo
 		
 		Statement st = con.createStatement();
 		
-		String query = "create table emp (empId int primary key, empName varchar(40), empSalary double)";
+		String query = "create table student2 (studentId int primary key, studentName varchar(40), studentMarks int)";
 		int i = st.executeUpdate(query);
 
 		System.out.println("No of rows affected : "+i);

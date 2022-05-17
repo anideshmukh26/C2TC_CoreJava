@@ -67,7 +67,8 @@ public class Employee implements Serializable
 		this.empName = empName;
 	}
 
-	public double getEmpSalary() {
+	public double getEmpSalary() 
+	{
 		return empSalary;
 	}
 
