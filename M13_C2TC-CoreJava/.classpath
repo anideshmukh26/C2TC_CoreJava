@@ -77,6 +77,8 @@
 	<classpathentry kind="src" path="Day69_14-May-2022"/>
 	<classpathentry kind="src" path="Day70_15-May-2022"/>
 	<classpathentry kind="src" path="Day71_16-May-2022"/>
+	<classpathentry kind="src" path="Day72_17-May-2022"/>
+	<classpathentry kind="src" path="Day73_18-May-2022"/>
 	<classpathentry kind="lib" path="D:/Aniket/TNS C2CT Program 23-02-2022/Hibernate/mysql-connector-java-8.0.13.jar"/>
 	<classpathentry kind="lib" path="D:/Aniket/TNS C2CT Program 23-02-2022/Hibernate/antlr-2.7.7.jar"/>
 	<classpathentry kind="lib" path="D:/Aniket/TNS C2CT Program 23-02-2022/Hibernate/byte-buddy-1.8.17.jar"/>
