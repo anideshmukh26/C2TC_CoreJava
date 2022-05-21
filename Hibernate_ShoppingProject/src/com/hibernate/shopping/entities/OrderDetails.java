@@ -39,7 +39,7 @@ public class OrderDetails implements Serializable
 	private String paymentMode;
 	
 	@Column(name ="Shop_ID")
-	private Shop shop_id;
+	private Shop shop;
 	
 	//@ManyToOne(cascade = CascadeType.ALL)
 	//@JoinColumn(name ="Cust_Id")
@@ -47,65 +47,65 @@ public class OrderDetails implements Serializable
 	
 	public OrderDetails() {}
 
-	public OrderDetails(int id, LocalDateTime dateOfPurchase, float total, String paymentMode,
-			Shop shop_id, Customer customer) 
+	public OrderDetails(int id, LocalDateTime dateOfPurchase, float total, String paymentMode, Shop shop,
+			Customer customer)
 	{
 		this.id = id;
 		this.dateOfPurchase = dateOfPurchase;
 		this.total = total;
 		this.paymentMode = paymentMode;
-		this.shop_id = shop_id;
+		this.shop = shop;
 		this.customer = customer;
 	}
 
-	public int getId()
+	public int getId() 
 	{
 		return id;
 	}
-	
+
 	public void setId(int id) 
 	{
 		this.id = id;
 	}
-	
+
 	public LocalDateTime getDateOfPurchase() 
 	{
 		return dateOfPurchase;
 	}
-	
-	public void setDateOfPurchase(LocalDateTime dateOfPurchase)
+
+	public void setDateOfPurchase(LocalDateTime dateOfPurchase) 
 	{
 		this.dateOfPurchase = dateOfPurchase;
 	}
-	
-	public float getTotal() 
+
+	public float getTotal()
 	{
 		return total;
 	}
-	
+
 	public void setTotal(float total) 
 	{
 		this.total = total;
 	}
-	
+
 	public String getPaymentMode() 
 	{
 		return paymentMode;
 	}
-	
-	public void setPaymentMode(String paymentMode)
+
+	public void setPaymentMode(String paymentMode) 
 	{
 		this.paymentMode = paymentMode;
 	}
-	
-	public Shop getShop_id() 
+
+	public Shop getShop() 
 	{
-		return shop_id;
+		return shop;
 	}
-	
-	public void setShop_id(Shop shop_id) 
+
+	public void setShop(Shop shop) 
 	{
-		this.shop_id = shop_id;
+		this.shop = shop;
 	}
 
 	public Customer getCustomer() 
@@ -113,8 +113,15 @@ public class OrderDetails implements Serializable
 		return customer;
 	}
 
-	public void setCustomer(Customer customer) 
+	public void setCustomer(Customer customer)
 	{
 		this.customer = customer;
+	}
+
+	@Override
+	public String toString() 
+	{
+		return "OrderDetails [id=" + id + ", dateOfPurchase=" + dateOfPurchase + ", total=" + total + ", paymentMode="
+				+ paymentMode + ", shop=" + shop + ", customer=" + customer + "]";
 	}
 }

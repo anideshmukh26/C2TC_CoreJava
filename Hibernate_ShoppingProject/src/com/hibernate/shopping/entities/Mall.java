@@ -29,9 +29,6 @@ public class Mall implements Serializable
 	@Column(name ="Location")
 	private String location;
 	
-	@Column(name ="Shop_ID")
-	private Shop shop_id;
-	
 	@Column(name ="Categories")
 	private String categories;
 	
@@ -40,47 +37,36 @@ public class Mall implements Serializable
 	
 	public Mall() {}
 
-	public Mall(long id, MallAdmin mallAdmin, String mallName, String location, Shop shop_id, String categories) 
+	public Mall(long id, String mallName, String location, String categories, MallAdmin mallAdmin)
 	{
 		Id = id;
-		this.mallAdmin = mallAdmin;
 		this.mallName = mallName;
 		this.location = location;
-		this.shop_id = shop_id;
 		this.categories = categories;
+		this.mallAdmin = mallAdmin;
 	}
 
-	public long getId()
+	public long getId() 
 	{
 		return Id;
 	}
 
-	public void setId(long id)
+	public void setId(long id) 
 	{
 		Id = id;
 	}
 
-	public MallAdmin getMallAdmin() 
-	{
-		return mallAdmin;
-	}
-
-	public void setMallAdmin(MallAdmin mallAdmin) 
-	{
-		this.mallAdmin = mallAdmin;
-	}
-
-	public String getMallName()
+	public String getMallName() 
 	{
 		return mallName;
 	}
 
-	public void setMallName(String mallName) 
+	public void setMallName(String mallName)
 	{
 		this.mallName = mallName;
 	}
 
-	public String getLocation()
+	public String getLocation() 
 	{
 		return location;
 	}
@@ -88,16 +74,6 @@ public class Mall implements Serializable
 	public void setLocation(String location)
 	{
 		this.location = location;
-	}
-
-	public Shop getShop_id()
-	{
-		return shop_id;
-	}
-
-	public void setShop_id(Shop shop_id) 
-	{
-		this.shop_id = shop_id;
 	}
 
 	public String getCategories()
@@ -110,10 +86,20 @@ public class Mall implements Serializable
 		this.categories = categories;
 	}
 
-	@Override
-	public String toString() 
+	public MallAdmin getMallAdmin()
 	{
-		return "Mall [Id=" + Id + ", mallAdmin=" + mallAdmin + ", mallName=" + mallName + ", location=" + location
-				+ ", shop_id=" + shop_id + ", categories=" + categories + "]";
+		return mallAdmin;
+	}
+
+	public void setMallAdmin(MallAdmin mallAdmin)
+	{
+		this.mallAdmin = mallAdmin;
+	}
+
+	@Override
+	public String toString()
+	{
+		return "Mall [Id=" + Id + ", mallName=" + mallName + ", location=" + location + ", categories=" + categories
+				+ ", mallAdmin=" + mallAdmin + "]";
 	}
 }

@@ -113,6 +113,6 @@ public class User implements Serializable
 	public String toString() 
 	{
 		return "User [id=" + id + ", name=" + name + ", type=" + type + ", password=" + password + ", customer="
-				+ customer + "]";
-	}	
+				+ customer + ", malladmin=" + malladmin + "]";
+	}
 }

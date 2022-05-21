@@ -49,6 +49,17 @@ public class Employee implements Serializable
 	
 	public Employee() {}
 	
+	public Employee(int id, String name, LocalDate dob, float salary, String address, String designation, Shop shop) 
+	{
+		this.id = id;
+		this.name = name;
+		this.dob = dob;
+		this.salary = salary;
+		this.address = address;
+		this.designation = designation;
+		this.shop = shop;
+	}
+	
 	public int getId()
 	{
 		return id;
@@ -108,5 +119,21 @@ public class Employee implements Serializable
 	{
 		this.designation = designation;
 	}
+	
+	public Shop getShop() 
+	{
+		return shop;
+	}
 
+	public void setShop(Shop shop)
+	{
+		this.shop = shop;
+	}
+
+	@Override
+	public String toString() 
+	{
+		return "Employee [id=" + id + ", name=" + name + ", dob=" + dob + ", salary=" + salary + ", address=" + address
+				+ ", designation=" + designation + ", shop=" + shop + "]";
+	}
 }

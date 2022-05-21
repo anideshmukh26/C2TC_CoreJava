@@ -32,21 +32,21 @@ public class ShopOwner implements Serializable
 	@Column(name ="ShopOwner_Address")
 	private String address;
 	
-	@Column(name ="Shop_Id")
-	private Shop shop_id;
-	
 	@OneToOne(mappedBy ="shopowner")
 	private MallAdmin mallAdmin;
 	
+	@Column(name ="Shop_Id")
+	private Shop shop;
+	
 	public ShopOwner() {}
 	
-	public ShopOwner(int id, String name, LocalDate dob, String address, Shop shop_id, MallAdmin mallAdmin) 
+	public ShopOwner(int id, String name, LocalDate dob, String address, Shop shop, MallAdmin mallAdmin) 
 	{
 		this.id = id;
 		this.name = name;
 		this.dob = dob;
 		this.address = address;
-		this.shop_id = shop_id;
+		this.shop = shop;
 		this.mallAdmin = mallAdmin;
 	}
 
@@ -89,14 +89,14 @@ public class ShopOwner implements Serializable
 		this.address = address;
 	}
 	
-	public Shop getShop_id() 
+	public Shop getShop() 
 	{
-		return shop_id;
+		return shop;
 	}
 	
-	public void setShop_id(Shop shop_id) 
+	public void setShop(Shop shop) 
 	{
-		this.shop_id = shop_id;
+		this.shop = shop;
 	}
 
 	public MallAdmin getMallAdmin()
@@ -112,7 +112,7 @@ public class ShopOwner implements Serializable
 	@Override
 	public String toString() 
 	{
-		return "ShopOwner [id=" + id + ", name=" + name + ", dob=" + dob + ", address=" + address + ", shop_id="
-				+ shop_id + ", mallAdmin=" + mallAdmin + "]";
+		return "ShopOwner [id=" + id + ", name=" + name + ", dob=" + dob + ", address=" + address + ", shop="
+				+ shop + ", mallAdmin=" + mallAdmin + "]";
 	}
 }

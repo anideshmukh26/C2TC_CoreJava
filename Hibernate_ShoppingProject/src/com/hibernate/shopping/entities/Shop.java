@@ -130,6 +130,32 @@ public class Shop implements Serializable
 	{
 		this.leaseStatus = leaseStatus;
 	}
-	
-	
+
+	public Employee getEmployee() 
+	{
+		return employee;
+	}
+
+	public void setEmployee(Employee employee) 
+	{
+		this.employee = employee;
+	}
+
+	public Item getItem() 
+	{
+		return item;
+	}
+
+	public void setItem(Item item) 
+	{
+		this.item = item;
+	}
+
+	@Override
+	public String toString() 
+	{
+		return "Shop [shopId=" + shopId + ", shopCategory=" + shopCategory + ", shopName=" + shopName + ", customers="
+				+ customers + ", shopStatus=" + shopStatus + ", leaseStatus=" + leaseStatus + ", shopOwner=" + shopOwner
+				+ ", employee=" + employee + ", item=" + item + "]";
+	}	
 }

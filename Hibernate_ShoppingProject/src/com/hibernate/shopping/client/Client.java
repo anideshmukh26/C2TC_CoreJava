@@ -60,25 +60,21 @@ public class Client
 		// Add records in Customer Table.
 		// Row 1
 		Customer cust = new Customer();
-		cust.setId(01);
+		cust.setId(101151);
 		cust.setName("Anita");
 		cust.setPhone("1234567890");
 		cust.setEmail("anita@gmail.com");
-		//cs.addCustomer(cust);
-		
-
 		
 		//Row 2
 		Customer cust1 = new Customer();
-		cust1.setId(02);
+		cust1.setId(101232);
 		cust1.setName("Rushi");
 		cust1.setPhone("1234567485");
 		cust1.setEmail("rushi@gmail.com");
-		//cs.addCustomer(cust1);
 		
 		System.out.println("Rows Inserted for Customer"); 
 		
-		// Add records of employee operation
+		// Add records of employee Table.
 		// Row1
 		Employee emp = new Employee();
 		LocalDate date =LocalDate.of(1996,9,26);
@@ -88,7 +84,6 @@ public class Client
 		emp.setSalary(25000);
 		emp.setAddress("Thane");
 		emp.setDesignation("Cashier");
-		//es.addEmployee(emp);
 		
 		// Row2
 		Employee emp1 = new Employee();
@@ -99,11 +94,10 @@ public class Client
 		emp1.setSalary(20000);
 		emp1.setAddress("Mulund");
 		emp1.setDesignation("Salesman");
-		//es.addEmployee(emp1);
 		
 		System.out.println("Rows Inserted for Employee"); 
 		
-		// Add records of Item operation
+		// Add records of Item Table.
 		// Row 1
 		Item item = new Item();
 		LocalDate date2 =LocalDate.of(2022,3,15);
@@ -114,7 +108,6 @@ public class Client
 		item.setExpiry(date3);
 		item.setPrice(10000);
 		item.setCategory("Android");
-		//is.addItem(item);
 		
 		// Row 2 
 		Item item1 = new Item();
@@ -126,28 +119,25 @@ public class Client
 		item1.setExpiry(date5);
 		item1.setPrice(4500);
 		item1.setCategory("Food");
-		//is.addItem(item1);
 		
 		System.out.println("Rows Inserted for Item");
 		
-		// Add records of MallAdmin operation
+		// Add records of MallAdmin Table.
 		// Row 1
 		MallAdmin mallad = new MallAdmin();
 		mallad.setName("Raju");
 		mallad.setPassword("1234");
 		mallad.setPhone("1457495614");
-		//mas.addMallAdmin(mallad);
 		
 		// Row 2
 		MallAdmin mallad1 = new MallAdmin();
 		mallad1.setName("Mohatsim");
 		mallad1.setPassword("1474");
 		mallad1.setPhone("1457416544");
-		//mas.addMallAdmin(mallad1);
 		
 		System.out.println("Rows Inserted for MallAdmin");
 		
-		// Add records of Mall operation
+		// Add records of Mall Table.
 		// Row 1
 		Mall mall = new Mall();
 		
@@ -155,7 +145,6 @@ public class Client
 		mall.setMallName("Korum");
 		mall.setLocation("Thane");
 		mall.setCategories("Metro city");
-		//ms.addMall(mall);
 		
 		// Row 2
 		Mall mall1 = new Mall();
@@ -164,12 +153,11 @@ public class Client
 		mall1.setMallName("Pheonix");
 		mall1.setLocation("Kurla");
 		mall1.setCategories("Metro city");
-		//ms.addMall(mall1);
 		
 		System.out.println("Rows Inserted for Mall");
 		
 		
-		// Add records of OrderDetails operation
+		// Add records of OrderDetails Table.
 		// Row 1
 		OrderDetails od = new OrderDetails();
 		LocalDateTime datetime = LocalDateTime.of(2022,5, 12, 7, 20);
@@ -177,7 +165,6 @@ public class Client
 		od.setDateOfPurchase(datetime);
 		od.setTotal(10000);
 		od.setPaymentMode("Online");
-		//ods.addOrderDetails(od);
 		
 		// Row 2
 		OrderDetails od1 = new OrderDetails();
@@ -186,11 +173,10 @@ public class Client
 		od1.setDateOfPurchase(datetime1);
 		od1.setTotal(10000);
 		od1.setPaymentMode("Online");
-		//ods.addOrderDetails(od1);
 		
 		System.out.println("Rows Inserted for OrderDetails");
 		
-		// Add records for shop
+		// Add records for shop Table.
 		// Row 1 
 		Shop shp = new Shop();
 		
@@ -200,7 +186,6 @@ public class Client
 		shp.setCustomers("Regular");
 		shp.setShopStatus("Open");
 		shp.setLeaseStatus("Lease");
-		//ss.addShop(shp);
 		
 		// Row 2 
 		Shop shp1 = new Shop();
@@ -211,11 +196,10 @@ public class Client
 		shp1.setCustomers("New");
 		shp1.setShopStatus("Open");
 		shp1.setLeaseStatus("Owned");
-		//ss.addShop(shp1);
 		
 		System.out.println("Rows Inserted for Shop");
 		
-		// Add records for ShopOwner
+		// Add records for ShopOwner Table.
 		ShopOwner show = new ShopOwner();
 		LocalDate date6 =LocalDate.of(1980,10,10);
 		
@@ -224,7 +208,6 @@ public class Client
 		show.setName("Chetan");
 		show.setDob(date6);
 		show.setAddress("101, Raj CHS, Mulund");
-		//sos.addShopOwner(show);
 		
 		// Row 2
 		ShopOwner show1 = new ShopOwner();
@@ -234,11 +217,10 @@ public class Client
 		show1.setName("Harsh");
 		show1.setDob(date7);
 		show1.setAddress("306, Deva CHS, Kalyan");
-		//sos.addShopOwner(show1);
 		
 		System.out.println("Rows Inserted for ShopOwner");
 		
-		// Add records for User
+		// Add records for User Table.
 		// Row 1 
 		User user = new User();
 		
@@ -246,7 +228,6 @@ public class Client
 		user.setName("Anita123");
 		user.setType("Regular");
 		user.setPassword("Anu1234");
-		//us.addUser(user);	
 		
 		// Row 2
 		User user1 = new User();
@@ -255,9 +236,8 @@ public class Client
 		user1.setName("Rushi007");
 		user1.setType("New");
 		user1.setPassword("Rushi@007");
-		//us.addUser(user1);
 		
-		System.out.println("Rows Inserted for User");
+		System.out.println("Rows Inserted for User");	
 		
 		
 		// 1 : 1 - MAPPING 
@@ -288,7 +268,29 @@ public class Client
 		mallad1.setShopowner(show1);
 		
 		em.persist(mallad);
-		em.persist(mallad1);
+		em.persist(mallad1);				
+		
+		// 1 : M
+		
+		
+		em.persist(emp);
+		em.persist(emp1);
+		
+		em.persist(item);
+		em.persist(item1);
+		
+		em.persist(od);
+		em.persist(od1);
+		
+		em.persist(shp);
+		em.persist(shp1);
+		
+		em.persist(show);
+		em.persist(show1);
+		
+		
+		
+		
 		
 		
 		
@@ -307,7 +309,7 @@ public class Client
 		em.getTransaction().commit();
 		
 		em.close();
-		factory.close();
+		factory.close(); 
 		
 		
 		
@@ -330,9 +332,9 @@ public class Client
 		
 		
 		// Retrieve operation
-		/*emp = es.searchEmployeeById(2);
-		System.out.println("Id: "+employee.getId());
-		System.out.println("Name: "+employee.getName());
+	/*	emp = es.searchEmployeeById(2);
+		System.out.println("Id: "+emp.getId());
+		System.out.println("Name: "+emp.getName());
 		System.out.println(emp); */
 		
 		// Update operation
@@ -341,7 +343,7 @@ public class Client
 		emp.setSalary(15000);
 		emp.setAddress("Diva");
 		emp.setDesignation("Store Keeper");
-		es.updateEmployee(emp); */
+		es.updateEmployee(emp); 
 		
 		//System.out.println("Rows Updated"); 
 		

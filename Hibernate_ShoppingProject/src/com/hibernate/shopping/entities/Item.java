@@ -48,7 +48,8 @@ public class Item implements Serializable
 	
 	public Item() {}
 	
-	public Item(long id, String name, LocalDate manufacturing, LocalDate expiry, float price, String category)
+	public Item(long id, String name, LocalDate manufacturing, LocalDate expiry, float price, String category,
+			Shop shop) 
 	{
 		this.id = id;
 		this.name = name;
@@ -56,6 +57,7 @@ public class Item implements Serializable
 		this.expiry = expiry;
 		this.price = price;
 		this.category = category;
+		this.shop = shop;
 	}
 
 	public long getId() 
@@ -116,5 +118,22 @@ public class Item implements Serializable
 	public void setExpiry(LocalDate expiry)
 	{
 		this.expiry = expiry;
+	}
+
+	public Shop getShop() 
+	{
+		return shop;
+	}
+
+	public void setShop(Shop shop) 
+	{
+		this.shop = shop;
+	}
+
+	@Override
+	public String toString() 
+	{
+		return "Item [id=" + id + ", name=" + name + ", manufacturing=" + manufacturing + ", expiry=" + expiry
+				+ ", price=" + price + ", category=" + category + ", shop=" + shop + "]";
 	}
 }
