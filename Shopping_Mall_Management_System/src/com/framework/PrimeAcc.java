@@ -21,12 +21,6 @@ public class PrimeAcc extends ShopAcc
 		
 	}
 
-	@Override
-	public String toString() 
-	{
-		return "PrimeAcc [isPrime=" + isPrime + "]"; 
-	} 
-
 	public boolean isPrime() 
 	{
 		return isPrime;
@@ -41,4 +35,11 @@ public class PrimeAcc extends ShopAcc
 	{
 		return deliveryCharges;
 	}
+	
+	@Override
+	public String toString() 
+	{
+		return "PrimeAcc [isPrime=" + isPrime + "]"; 
+	} 
+
 }

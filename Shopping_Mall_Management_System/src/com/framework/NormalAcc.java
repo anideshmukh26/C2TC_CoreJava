@@ -18,14 +18,14 @@ public class  NormalAcc extends ShopAcc
 		
 	}
 
+	public float getDeliveryCharges() 
+	{
+		return deliveryCharges;
+	}
+	
 	@Override
 	public String toString()
 	{
 		return "NormalAcc [deliveryCharges=" + deliveryCharges + "]";
-	}
-
-	public float getDeliveryCharges() 
-	{
-		return deliveryCharges;
 	}
 }

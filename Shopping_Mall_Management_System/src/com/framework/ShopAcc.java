@@ -26,12 +26,6 @@ public abstract class ShopAcc
 		
 	}
 	
-	@Override
-	public String toString() 
-	{
-		return "ShopAcc [accNo=" + accNo + ", accNm=" + accNm + ", charges=" + charges + "]";
-	}
-	
 	public int getAccNo()
 	{
 		return accNo;
@@ -55,6 +49,12 @@ public abstract class ShopAcc
 	public void setCharges(float charges) 
 	{
 		this.charges = charges;
+	}
+	
+	@Override
+	public String toString() 
+	{
+		return "ShopAcc [accNo=" + accNo + ", accNm=" + accNm + ", charges=" + charges + "]";
 	}
 }
 
