@@ -1,16 +1,15 @@
-// OneToOne Mapping.
 
-package com.onetoone.part1;
+
+package com.hibernate.shopping.entities;
 
 import java.io.Serializable;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -23,37 +22,37 @@ public class Customer implements Serializable
 	private static final long serialVersionUID =1L;
 	
 	@Id
-	@GeneratedValue(strategy= GenerationType.AUTO)
-	@Column(name =" ID")
+	@Column(name ="Cust_ID")
 	private int id;
 	
-	@Column(name = "Name")
+	@Column(name ="Cust_Name")
 	private String name;
 	
-	//private OrderDetails order_id;
-	
-	@Column(name = "PhoneNo")
+	@Column(name ="Cust_PhoneNo")
 	private String phone;
 	
-	@Column(name = "EmailID")
+	@Column(name ="Cust_EmailID")
 	private String email;
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name ="User_Id")
 	private User user;
 	
+	//@OneToMany(mappedBy ="customer")
+	private OrderDetails orderdetails;
+	
 	public Customer() {}
 
-	public Customer(int id, String name, String phone, String email, User user) {
-
+	public Customer(int id, String name, String phone, String email, User user,
+			OrderDetails orderdetails) 
+	{
 		this.id = id;
 		this.name = name;
 		this.phone = phone;
 		this.email = email;
 		this.user = user;
+		this.orderdetails = orderdetails;
 	}
-
-
 
 	public int getId() 
 	{
@@ -75,16 +74,6 @@ public class Customer implements Serializable
 		this.name = name;
 	}
 	
-	/*public OrderDetails getOrder_id() 
-	{
-		return order_id;
-	}
-
-	public void setOrder_id(OrderDetails order_id) 
-	{
-		this.order_id = order_id;
-	} */
-
 	public String getPhone() 
 	{
 		return phone;
@@ -104,20 +93,31 @@ public class Customer implements Serializable
 	{
 		this.email = email;
 	}
-	
-	public User getUserName() 
+
+	public User getUser()
 	{
 		return user;
 	}
-	
-	public void setUserName(User user) 
+
+	public void setUser(User user)
 	{
 		this.user = user;
+	}
+	
+	public OrderDetails getOrderdetails() 
+	{
+		return orderdetails;
+	}
+
+	public void setOrderdetails(OrderDetails orderdetails)
+	{
+		this.orderdetails = orderdetails;
 	}
 
 	@Override
 	public String toString() 
 	{
-		return "Customer [id=" + id + ", name=" + name + ", phone=" + phone + ", email=" + email + "]";
+		return "Customer [id=" + id + ", name=" + name + ", phone=" + phone + ", email="
+				+ email + ", user=" + user + "]";
 	}
 }

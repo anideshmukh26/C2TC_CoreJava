@@ -1,6 +1,6 @@
-// OneToOne Mapping.
 
-package com.onetoone.part1;
+
+package com.hibernate.shopping.entities;
 
 import java.io.Serializable;
 
@@ -19,29 +19,34 @@ public class User implements Serializable
 	private static final long serialVersionUID =1L;
 	
 	@Id
-	@Column(name = "UserID")
+	@Column(name ="User_ID")
 	private int id;
 	
-	@Column(name = "UserName")
+	@Column(name ="User_Name")
 	private String name;
 	
-	@Column(name = "UserType")
+	@Column(name ="User_Type")
 	private String type;
 	
-	@Column(name = "Password")
+	@Column(name ="Password")
 	private String password;
 	
 	@OneToOne(mappedBy ="user")
 	private Customer customer;
 	
+	@OneToOne(mappedBy ="user")
+	private MallAdmin malladmin;
+	
 	public User() {}
 	
-	public User(int id, String name, String type, String password) 
+	public User(int id, String name, String type, String password, Customer customer, MallAdmin malladmin)
 	{
 		this.id = id;
 		this.name = name;
 		this.type = type;
 		this.password = password;
+		this.customer = customer;
+		this.malladmin = malladmin;
 	}
 
 	public int getId() 
@@ -84,9 +89,30 @@ public class User implements Serializable
 		this.password = password;
 	}
 
+	public Customer getCustomer() 
+	{
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) 
+	{
+		this.customer = customer;
+	}
+	
+	public MallAdmin getMalladmin()
+	{
+		return malladmin;
+	}
+
+	public void setMalladmin(MallAdmin malladmin) 
+	{
+		this.malladmin = malladmin;
+	}
+
 	@Override
 	public String toString() 
 	{
-		return "User [id=" + id + ", name=" + name + ", type=" + type + ", password=" + password +"]";
-	}
+		return "User [id=" + id + ", name=" + name + ", type=" + type + ", password=" + password + ", customer="
+				+ customer + "]";
+	}	
 }
