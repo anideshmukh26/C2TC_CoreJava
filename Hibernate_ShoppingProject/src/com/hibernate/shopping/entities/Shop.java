@@ -3,6 +3,7 @@
 package com.hibernate.shopping.entities;
 
 import java.io.Serializable;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -37,19 +38,19 @@ public class Shop implements Serializable
 	@Column(name ="Lease_Status")
 	private String leaseStatus;
 	
-	@Column(name ="ShopOwner_ID")
-	private ShopOwner shopOwner;
+	/*@Column(name ="ShopOwner_ID")
+	private ShopOwner shopOwner;*/
 	
-	//@OneToMany(mappedBy ="shop")
-	private Employee employee;
+	@OneToMany(mappedBy ="shop")
+	private Set<Employee> employee;
 	
-	//@OneToMany(mappedBy ="shop")
-	private Item item;
+	@OneToMany(mappedBy ="shop")
+	private Set<Item> item;
 	
 	public Shop() {}
 	
 	public Shop(int shopId, String shopCategory, String shopName, String customers, String shopStatus,
-			String leaseStatus, ShopOwner shopOwner, Employee employee, Item item) 
+			String leaseStatus,/* ShopOwner shopOwner,*/ Set<Employee> employee, Set<Item> item) 
 	{
 		this.shopId = shopId;
 		this.shopCategory = shopCategory;
@@ -57,11 +58,11 @@ public class Shop implements Serializable
 		this.customers = customers;
 		this.shopStatus = shopStatus;
 		this.leaseStatus = leaseStatus;
-		this.shopOwner = shopOwner;
+		//this.shopOwner = shopOwner;
 		this.employee = employee;
 		this.item = item;
 	}
-	
+
 	public int getShopId() 
 	{
 		return shopId;
@@ -111,7 +112,7 @@ public class Shop implements Serializable
 		this.shopStatus = shopStatus;
 	}
 	
-	public ShopOwner getShopOwner()
+	/*public ShopOwner getShopOwner()
 	{
 		return shopOwner;
 	}
@@ -119,7 +120,7 @@ public class Shop implements Serializable
 	public void setShopOwner(ShopOwner shopOwner) 
 	{
 		this.shopOwner = shopOwner;
-	}
+	}*/
 
 	public String getLeaseStatus() 
 	{
@@ -131,22 +132,22 @@ public class Shop implements Serializable
 		this.leaseStatus = leaseStatus;
 	}
 
-	public Employee getEmployee() 
+	public Set<Employee> getEmployee()
 	{
 		return employee;
 	}
 
-	public void setEmployee(Employee employee) 
+	public void setEmployee(Set<Employee> employee)
 	{
 		this.employee = employee;
 	}
 
-	public Item getItem() 
+	public Set<Item> getItem() 
 	{
 		return item;
 	}
 
-	public void setItem(Item item) 
+	public void setItem(Set<Item> item) 
 	{
 		this.item = item;
 	}
@@ -155,7 +156,6 @@ public class Shop implements Serializable
 	public String toString() 
 	{
 		return "Shop [shopId=" + shopId + ", shopCategory=" + shopCategory + ", shopName=" + shopName + ", customers="
-				+ customers + ", shopStatus=" + shopStatus + ", leaseStatus=" + leaseStatus + ", shopOwner=" + shopOwner
-				+ ", employee=" + employee + ", item=" + item + "]";
+				+ customers + ", shopStatus=" + shopStatus + ", leaseStatus=" + leaseStatus + ", employee=" + employee + ", item=" + item + "]";
 	}	
 }

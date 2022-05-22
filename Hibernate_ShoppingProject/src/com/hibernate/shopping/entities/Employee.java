@@ -43,8 +43,8 @@ public class Employee implements Serializable
 	@Column(name ="Designation")
 	private String designation;
 	
-	//@ManyToOne(cascade = CascadeType.ALL)
-	//@JoinColumn(name ="ShopEmp_Id")
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name ="ShopEmp_Id")
 	private Shop shop;
 	
 	public Employee() {}

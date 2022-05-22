@@ -2,6 +2,8 @@
 
 package com.hibernate.shopping.entities;
 
+
+import java.util.Set;
 import java.io.Serializable;
 
 import javax.persistence.CascadeType;
@@ -38,13 +40,13 @@ public class Customer implements Serializable
 	@JoinColumn(name ="User_Id")
 	private User user;
 	
-	//@OneToMany(mappedBy ="customer")
-	private OrderDetails orderdetails;
+	@OneToMany(mappedBy ="customer")
+	private Set<OrderDetails> orderdetails;
 	
 	public Customer() {}
 
-	public Customer(int id, String name, String phone, String email, User user,
-			OrderDetails orderdetails) 
+
+	public Customer(int id, String name, String phone, String email, User user, Set<OrderDetails> orderdetails)
 	{
 		this.id = id;
 		this.name = name;
@@ -53,6 +55,7 @@ public class Customer implements Serializable
 		this.user = user;
 		this.orderdetails = orderdetails;
 	}
+
 
 	public int getId() 
 	{
@@ -104,12 +107,12 @@ public class Customer implements Serializable
 		this.user = user;
 	}
 	
-	public OrderDetails getOrderdetails() 
+	public Set<OrderDetails> getOrderdetails() 
 	{
 		return orderdetails;
 	}
 
-	public void setOrderdetails(OrderDetails orderdetails)
+	public void setOrderdetails(Set<OrderDetails> orderdetails)
 	{
 		this.orderdetails = orderdetails;
 	}

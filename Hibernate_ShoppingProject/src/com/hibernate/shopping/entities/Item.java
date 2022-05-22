@@ -42,8 +42,8 @@ public class Item implements Serializable
 	@Column(name ="Category")
 	private String category;
 	
-	//@ManyToOne(cascade = CascadeType.ALL)
-	//@JoinColumn(name ="ShopItem_Id")
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name ="ShopItem_Id")
 	private Shop shop;
 	
 	public Item() {}

@@ -46,7 +46,7 @@ public class Client
 		em.getTransaction().begin();
 		
 		
-		CustomerService cs = new CustomerServiceImpl();
+		CustomerService cs = new CustomerServiceImpl(); 
 		EmployeeService es = new EmployeeServiceImpl();
 		ItemService is = new ItemServiceImpl();
 		MallAdminService mas = new MallAdminServiceImpl();
@@ -160,7 +160,7 @@ public class Client
 		// Add records of OrderDetails Table.
 		// Row 1
 		OrderDetails od = new OrderDetails();
-		LocalDateTime datetime = LocalDateTime.of(2022,5, 12, 7, 20);
+		LocalDateTime datetime = LocalDateTime.of(2022,5,12,7,20);
 		
 		od.setDateOfPurchase(datetime);
 		od.setTotal(10000);
@@ -168,7 +168,7 @@ public class Client
 		
 		// Row 2
 		OrderDetails od1 = new OrderDetails();
-		LocalDateTime datetime1 = LocalDateTime.of(2022,4,26, 4, 30);
+		LocalDateTime datetime1 = LocalDateTime.of(2022,4,26,4,30);
 				
 		od1.setDateOfPurchase(datetime1);
 		od1.setTotal(10000);
@@ -192,7 +192,7 @@ public class Client
 		
 		shp1.setShopId(10002);
 		shp1.setShopCategory("Gym Accesories");
-		shp1.setShopName("MB shop");
+		shp1.setShopName("Muscle Blaze Fitness");
 		shp1.setCustomers("New");
 		shp1.setShopStatus("Open");
 		shp1.setLeaseStatus("Owned");
@@ -240,6 +240,12 @@ public class Client
 		System.out.println("Rows Inserted for User");	
 		
 		
+		em.persist(shp);
+		em.persist(shp1);
+		
+		em.persist(show);
+		em.persist(show1);
+		
 		// 1 : 1 - MAPPING 
 		
 		// Customer & USer
@@ -270,35 +276,34 @@ public class Client
 		em.persist(mallad);
 		em.persist(mallad1);				
 		
+		
 		// 1 : M
 		
+		// Customer & OrderDetails
 		
-		em.persist(emp);
-		em.persist(emp1);
-		
-		em.persist(item);
-		em.persist(item1);
+		od.setCustomer(cust);
+		od1.setCustomer(cust1);
 		
 		em.persist(od);
 		em.persist(od1);
 		
-		em.persist(shp);
-		em.persist(shp1);
 		
-		em.persist(show);
-		em.persist(show1);
+		// Shop & Employee
 		
+		emp.setShop(shp);
+		emp1.setShop(shp1);
 		
+		em.persist(emp);
+		em.persist(emp1);
 		
+		// Shop & Item
 		
+		item.setShop(shp);
+		item1.setShop(shp1);
 		
-		
-		
-		
-		
-		
-		
-		
+		em.persist(item);
+		em.persist(item1);
+
 		
 		
 		
@@ -319,13 +324,13 @@ public class Client
 		
 		
 		// Retrieve operation
-		/*emp = es.searchEmployeeById(2);
+	/*	emp = es.searchEmployeeById(3);
 		System.out.println("Id: "+emp.getId());
 		System.out.println("Name: "+emp.getName());
 		System.out.println(emp); */
 				
 		// Update operation
-		/*emp = es.searchEmployeeById(3);
+	/*	emp = es.searchEmployeeById(4);
 		emp.setName("Harsh");
 		emp.setSalary(15000);
 		emp.setAddress("Diva");
@@ -339,7 +344,7 @@ public class Client
 		System.out.println(emp);
 		es.deleteEmployee(emp);
 				
-		System.out.println("Row Deleted");*/
+		System.out.println("Row Deleted"); */
 		
 		
 		

@@ -38,23 +38,23 @@ public class OrderDetails implements Serializable
 	@Column(name ="Payment_Mode")
 	private String paymentMode;
 	
-	@Column(name ="Shop_ID")
-	private Shop shop;
+	/*@Column(name ="Shop_ID")
+	private Shop shop; */
 	
-	//@ManyToOne(cascade = CascadeType.ALL)
-	//@JoinColumn(name ="Cust_Id")
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name ="Cust_Id")
 	private Customer customer;
 	
 	public OrderDetails() {}
 
-	public OrderDetails(int id, LocalDateTime dateOfPurchase, float total, String paymentMode, Shop shop,
+	public OrderDetails(int id, LocalDateTime dateOfPurchase, float total, String paymentMode, /*Shop shop,*/
 			Customer customer)
 	{
 		this.id = id;
 		this.dateOfPurchase = dateOfPurchase;
 		this.total = total;
 		this.paymentMode = paymentMode;
-		this.shop = shop;
+		//this.shop = shop;
 		this.customer = customer;
 	}
 
@@ -98,7 +98,7 @@ public class OrderDetails implements Serializable
 		this.paymentMode = paymentMode;
 	}
 
-	public Shop getShop() 
+	/*public Shop getShop() 
 	{
 		return shop;
 	}
@@ -106,7 +106,7 @@ public class OrderDetails implements Serializable
 	public void setShop(Shop shop) 
 	{
 		this.shop = shop;
-	}
+	}*/
 
 	public Customer getCustomer() 
 	{
@@ -122,6 +122,6 @@ public class OrderDetails implements Serializable
 	public String toString() 
 	{
 		return "OrderDetails [id=" + id + ", dateOfPurchase=" + dateOfPurchase + ", total=" + total + ", paymentMode="
-				+ paymentMode + ", shop=" + shop + ", customer=" + customer + "]";
+				+ paymentMode + ", customer=" + customer + "]";
 	}
 }
