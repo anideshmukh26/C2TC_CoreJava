@@ -318,40 +318,40 @@ public class Client
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		// Retrieve operation
-	/*	emp = es.searchEmployeeById(2);
+		/*emp = es.searchEmployeeById(2);
 		System.out.println("Id: "+emp.getId());
 		System.out.println("Name: "+emp.getName());
 		System.out.println(emp); */
-		
+				
 		// Update operation
 		/*emp = es.searchEmployeeById(3);
 		emp.setName("Harsh");
 		emp.setSalary(15000);
 		emp.setAddress("Diva");
 		emp.setDesignation("Store Keeper");
-		es.updateEmployee(emp); 
-		
+		es.updateEmployee(emp); */
+				
 		//System.out.println("Rows Updated"); 
-		
+				
 		// Delete operation
 		/*emp = es.searchEmployeeById(3);
 		System.out.println(emp);
 		es.deleteEmployee(emp);
-		
+				
 		System.out.println("Row Deleted");*/
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
 	}
 }
