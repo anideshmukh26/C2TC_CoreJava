@@ -83,7 +83,7 @@ public class Client
 		
 		//-------------------X	Employee	X----------------------------//
 		
-		// Add records of employee Table.
+		// Add records in employee Table.
 		// Row1
 		Employee emp = new Employee();
 		LocalDate date =LocalDate.of(1996,9,26);
@@ -106,39 +106,39 @@ public class Client
 		
 		System.out.println("Rows Inserted for Employee"); 
 		
-		// CRUD for Employee
-		EmployeeService es = new EmployeeServiceImpl();
-		
-									// ?????????	Retrieve operation	??????????///
-									
-									/*	emp = es.searchEmployeeById(3);
-										System.out.println("Id: "+emp.getId());
-										System.out.println("Name: "+emp.getName());
-										System.out.println(emp); */
-												
-									//++++++++++	Update operation	+++++++++++++//
-									
-									/*	emp = es.searchEmployeeById(4);
-										emp.setName("Harsh");
-										emp.setSalary(15000);
-										emp.setAddress("Diva");
-										emp.setDesignation("Store Keeper");
-										es.updateEmployee(emp); */
-												
-										//System.out.println("Rows Updated"); 
-												
-									//------------	Delete operation	-----------------//
-									
-										/*emp = es.searchEmployeeById(3);
-										System.out.println(emp);
-										es.deleteEmployee(emp);
-												
-										System.out.println("Row Deleted"); */
+				// CRUD for Employee
+				EmployeeService es = new EmployeeServiceImpl();
+				
+				// ?????????	Retrieve operation	??????????///
+											
+				/*	emp = es.searchEmployeeById(3);
+				System.out.println("Id: "+emp.getId());
+				System.out.println("Name: "+emp.getName());
+				System.out.println(emp); */
+														
+				//++++++++++	Update operation	+++++++++++++//
+											
+				/*	emp = es.searchEmployeeById(4);
+				emp.setName("Harsh");
+				emp.setSalary(15000);
+				emp.setAddress("Diva");
+				emp.setDesignation("Store Keeper");
+				es.updateEmployee(emp); */
+														
+				//System.out.println("Rows Updated"); 
+														
+				//------------	Delete operation	-----------------//
+											
+				/*emp = es.searchEmployeeById(3);
+				System.out.println(emp);
+				es.deleteEmployee(emp);
+														
+				System.out.println("Row Deleted"); */
 		
 		
 		//-------------------X	Item	X----------------------------//
 		
-		// Add records of Item Table.
+		// Add records in Item Table.
 		// Row 1
 		Item item = new Item();
 		LocalDate date2 =LocalDate.of(2022,3,15);
@@ -166,7 +166,7 @@ public class Client
 		
 		//-------------------X	MallAdmin	X----------------------------//
 		
-		// Add records of MallAdmin Table.
+		// Add records in MallAdmin Table.
 		// Row 1
 		MallAdmin mallad = new MallAdmin();
 		mallad.setName("Raju");
@@ -184,7 +184,7 @@ public class Client
 		
 		//-------------------X	Mall	X----------------------------//
 		
-		// Add records of Mall Table.
+		// Add records in Mall Table.
 		// Row 1
 		Mall mall = new Mall();
 		
@@ -206,7 +206,7 @@ public class Client
 		
 		//-------------------X	OrderDetails	X----------------------------//
 		
-		// Add records of OrderDetails Table.
+		// Add records in OrderDetails Table.
 		// Row 1
 		OrderDetails od = new OrderDetails();
 		LocalDateTime datetime = LocalDateTime.of(2022,5,12,7,20);
@@ -228,7 +228,7 @@ public class Client
 		
 		//-------------------X	Shop	X----------------------------//
 		
-		// Add records for shop Table.
+		// Add records in shop Table.
 		// Row 1 
 		Shop shp = new Shop();
 		
@@ -258,7 +258,7 @@ public class Client
 		
 		//-------------------X	ShopOwner	X----------------------------//
 		
-		// Add records for ShopOwner Table.
+		// Add records in ShopOwner Table.
 		ShopOwner show = new ShopOwner();
 		LocalDate date6 =LocalDate.of(1980,10,10);
 		
@@ -288,7 +288,7 @@ public class Client
 		
 		//-------------------X	User	X----------------------------//
 		
-		// Add records for User Table.
+		// Add records in User Table.
 		// Row 1 
 		User user = new User();
 		
