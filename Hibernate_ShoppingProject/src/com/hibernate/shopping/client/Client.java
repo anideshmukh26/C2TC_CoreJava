@@ -46,8 +46,8 @@ public class Client
 		em.getTransaction().begin();
 		
 		
-		CustomerService cs = new CustomerServiceImpl(); 
-		EmployeeService es = new EmployeeServiceImpl();
+		
+		
 		ItemService is = new ItemServiceImpl();
 		MallAdminService mas = new MallAdminServiceImpl();
 		MallService ms = new MallServiceImpl();
@@ -56,6 +56,7 @@ public class Client
 		ShopService ss = new ShopServiceImpl();
 		UserService us = new UserServiceImpl();
 	
+		//-------------------X	Customer	X----------------------------//
 		
 		// Add records in Customer Table.
 		// Row 1
@@ -73,6 +74,14 @@ public class Client
 		cust1.setEmail("rushi@gmail.com");
 		
 		System.out.println("Rows Inserted for Customer"); 
+		
+		// CRUD for Customer
+		CustomerService cs = new CustomerServiceImpl(); 
+		
+		
+		
+		
+		//-------------------X	Employee	X----------------------------//
 		
 		// Add records of employee Table.
 		// Row1
@@ -96,6 +105,38 @@ public class Client
 		emp1.setDesignation("Salesman");
 		
 		System.out.println("Rows Inserted for Employee"); 
+		
+		// CRUD for Employee
+		EmployeeService es = new EmployeeServiceImpl();
+		
+									// ?????????	Retrieve operation	??????????///
+									
+									/*	emp = es.searchEmployeeById(3);
+										System.out.println("Id: "+emp.getId());
+										System.out.println("Name: "+emp.getName());
+										System.out.println(emp); */
+												
+									//++++++++++	Update operation	+++++++++++++//
+									
+									/*	emp = es.searchEmployeeById(4);
+										emp.setName("Harsh");
+										emp.setSalary(15000);
+										emp.setAddress("Diva");
+										emp.setDesignation("Store Keeper");
+										es.updateEmployee(emp); */
+												
+										//System.out.println("Rows Updated"); 
+												
+									//------------	Delete operation	-----------------//
+									
+										/*emp = es.searchEmployeeById(3);
+										System.out.println(emp);
+										es.deleteEmployee(emp);
+												
+										System.out.println("Row Deleted"); */
+		
+		
+		//-------------------X	Item	X----------------------------//
 		
 		// Add records of Item Table.
 		// Row 1
@@ -122,6 +163,9 @@ public class Client
 		
 		System.out.println("Rows Inserted for Item");
 		
+		
+		//-------------------X	MallAdmin	X----------------------------//
+		
 		// Add records of MallAdmin Table.
 		// Row 1
 		MallAdmin mallad = new MallAdmin();
@@ -136,6 +180,9 @@ public class Client
 		mallad1.setPhone("1457416544");
 		
 		System.out.println("Rows Inserted for MallAdmin");
+		
+		
+		//-------------------X	Mall	X----------------------------//
 		
 		// Add records of Mall Table.
 		// Row 1
@@ -157,6 +204,8 @@ public class Client
 		System.out.println("Rows Inserted for Mall");
 		
 		
+		//-------------------X	OrderDetails	X----------------------------//
+		
 		// Add records of OrderDetails Table.
 		// Row 1
 		OrderDetails od = new OrderDetails();
@@ -175,6 +224,9 @@ public class Client
 		od1.setPaymentMode("Online");
 		
 		System.out.println("Rows Inserted for OrderDetails");
+		
+		
+		//-------------------X	Shop	X----------------------------//
 		
 		// Add records for shop Table.
 		// Row 1 
@@ -197,7 +249,14 @@ public class Client
 		shp1.setShopStatus("Open");
 		shp1.setLeaseStatus("Owned");
 		
+		em.persist(shp);
+		em.persist(shp1);
+		
+		
 		System.out.println("Rows Inserted for Shop");
+		
+		
+		//-------------------X	ShopOwner	X----------------------------//
 		
 		// Add records for ShopOwner Table.
 		ShopOwner show = new ShopOwner();
@@ -218,7 +277,16 @@ public class Client
 		show1.setDob(date7);
 		show1.setAddress("306, Deva CHS, Kalyan");
 		
+		em.persist(show);
+		em.persist(show1);
+		
+		
 		System.out.println("Rows Inserted for ShopOwner");
+		
+		
+		
+		
+		//-------------------X	User	X----------------------------//
 		
 		// Add records for User Table.
 		// Row 1 
@@ -240,11 +308,9 @@ public class Client
 		System.out.println("Rows Inserted for User");	
 		
 		
-		em.persist(shp);
-		em.persist(shp1);
 		
-		em.persist(show);
-		em.persist(show1);
+		
+		
 		
 		// 1 : 1 - MAPPING 
 		
@@ -274,18 +340,23 @@ public class Client
 		mallad1.setShopowner(show1);
 		
 		em.persist(mallad);
-		em.persist(mallad1);				
+		em.persist(mallad1);	
 		
 		
+		
+	
 		// 1 : M
 		
 		// Customer & OrderDetails
 		
 		od.setCustomer(cust);
-		od1.setCustomer(cust1);
-		
 		em.persist(od);
+		
+		od1.setCustomer(cust1);
 		em.persist(od1);
+		
+		
+		
 		
 		
 		// Shop & Employee
@@ -304,7 +375,7 @@ public class Client
 		em.persist(item);
 		em.persist(item1);
 
-		
+	
 		
 		
 		
@@ -323,28 +394,7 @@ public class Client
 		
 		
 		
-		// Retrieve operation
-	/*	emp = es.searchEmployeeById(3);
-		System.out.println("Id: "+emp.getId());
-		System.out.println("Name: "+emp.getName());
-		System.out.println(emp); */
-				
-		// Update operation
-	/*	emp = es.searchEmployeeById(4);
-		emp.setName("Harsh");
-		emp.setSalary(15000);
-		emp.setAddress("Diva");
-		emp.setDesignation("Store Keeper");
-		es.updateEmployee(emp); */
-				
-		//System.out.println("Rows Updated"); 
-				
-		// Delete operation
-		/*emp = es.searchEmployeeById(3);
-		System.out.println(emp);
-		es.deleteEmployee(emp);
-				
-		System.out.println("Row Deleted"); */
+	
 		
 		
 		

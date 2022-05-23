@@ -8,8 +8,6 @@ import java.time.LocalDate;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -24,7 +22,6 @@ public class Item implements Serializable
 	
 	@Id
 	@Column(name ="Item_ID")
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
 	@Column(name ="Item_Name")
