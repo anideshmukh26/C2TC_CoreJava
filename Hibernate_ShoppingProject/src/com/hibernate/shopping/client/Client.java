@@ -326,11 +326,7 @@ public class Client
 		System.out.println("Rows Inserted for User");	
 		
 		
-		
-		
-		
-		
-		// 1 : 1 - MAPPING 
+		//----------------X	1 : 1 - MAPPING	X--------------------------// 
 		
 		// Customer & USer
 		cust.setUser(user);
@@ -357,7 +353,7 @@ public class Client
 		em.persist(mallad1);	
 		
 		
-		// 1 : M
+		//---------------------X	1 : M - Mapping	---------------------------//
 		
 		// Customer & OrderDetails
 		
@@ -388,37 +384,11 @@ public class Client
 		em.persist(item1);
 
 	
-		
-		
-		
-		
-		
+	
 		
 		em.getTransaction().commit();
 		
 		em.close();
 		factory.close(); 
-		
-		
-		
-		
-		
-		
-		
-		
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
 	}
 }
