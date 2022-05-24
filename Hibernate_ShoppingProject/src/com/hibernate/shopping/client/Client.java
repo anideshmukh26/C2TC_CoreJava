@@ -75,6 +75,7 @@ public class Client
 		
 		System.out.println("Rows Inserted for Customer"); 
 		
+		
 		// CRUD for Customer
 		CustomerService cs = new CustomerServiceImpl(); 
 		
@@ -88,6 +89,7 @@ public class Client
 		Employee emp = new Employee();
 		LocalDate date =LocalDate.of(1996,9,26);
 		
+		emp.setId(7855);
 		emp.setName("Aniket");
 		emp.setDob(date);
 		emp.setSalary(25000);
@@ -98,6 +100,7 @@ public class Client
 		Employee emp1 = new Employee();
 		LocalDate date1 =LocalDate.of(1999,4,15);	 
 		
+		emp1.setId(56562);
 		emp1.setName("Rutik");
 		emp1.setDob(date1);
 		emp1.setSalary(20000);
@@ -144,6 +147,7 @@ public class Client
 		LocalDate date2 =LocalDate.of(2022,3,15);
 		LocalDate date3 =LocalDate.of(2032,3,15);
 		
+		item.setId(454646555);
 		item.setName("Mobile");
 		item.setManufacturing(date2);
 		item.setExpiry(date3);
@@ -155,6 +159,7 @@ public class Client
 		LocalDate date4 =LocalDate.of(2021,10,10);
 		LocalDate date5 =LocalDate.of(2025,3,28);
 		
+		item1.setId(8989894);
 		item1.setName("MB Protien");
 		item1.setManufacturing(date4);
 		item1.setExpiry(date5);
@@ -169,12 +174,14 @@ public class Client
 		// Add records in MallAdmin Table.
 		// Row 1
 		MallAdmin mallad = new MallAdmin();
+		
 		mallad.setName("Raju");
 		mallad.setPassword("1234");
 		mallad.setPhone("1457495614");
 		
 		// Row 2
 		MallAdmin mallad1 = new MallAdmin();
+		
 		mallad1.setName("Mohatsim");
 		mallad1.setPassword("1474");
 		mallad1.setPhone("1457416544");
@@ -211,6 +218,7 @@ public class Client
 		OrderDetails od = new OrderDetails();
 		LocalDateTime datetime = LocalDateTime.of(2022,5,12,7,20);
 		
+		od.setId(7979879);
 		od.setDateOfPurchase(datetime);
 		od.setTotal(10000);
 		od.setPaymentMode("Online");
@@ -218,10 +226,20 @@ public class Client
 		// Row 2
 		OrderDetails od1 = new OrderDetails();
 		LocalDateTime datetime1 = LocalDateTime.of(2022,4,26,4,30);
-				
+		
+		od1.setId(6568654);
 		od1.setDateOfPurchase(datetime1);
 		od1.setTotal(10000);
 		od1.setPaymentMode("Online");
+		
+		// Row 2
+		OrderDetails od2 = new OrderDetails();
+		LocalDateTime datetime2 = LocalDateTime.of(2022,4,26,4,30);
+			
+		od2.setId(6568655);
+		od2.setDateOfPurchase(datetime2);
+		od2.setTotal(5000);
+		od2.setPaymentMode("Online");
 		
 		System.out.println("Rows Inserted for OrderDetails");
 		
@@ -232,7 +250,7 @@ public class Client
 		// Row 1 
 		Shop shp = new Shop();
 		
-		shp.setShopId(10001);
+		shp.setShopId(10654);
 		shp.setShopCategory("Electronics");
 		shp.setShopName("Chroma");
 		shp.setCustomers("Regular");
@@ -242,7 +260,7 @@ public class Client
 		// Row 2 
 		Shop shp1 = new Shop();
 		
-		shp1.setShopId(10002);
+		shp1.setShopId(10546);
 		shp1.setShopCategory("Gym Accesories");
 		shp1.setShopName("Muscle Blaze Fitness");
 		shp1.setCustomers("New");
@@ -325,15 +343,11 @@ public class Client
 		mallad.setUser(user);
 		mallad1.setUser(user1);
 		
-		em.persist(mallad);
-		em.persist(mallad1);
 		
 		// MallAdmin & Mall
 		mallad.setMall(mall);
 		mallad1.setMall(mall1);
 		
-		em.persist(mallad);
-		em.persist(mallad1);
 		
 		// MallAdmin & ShopOwner
 		mallad.setShopowner(show);
@@ -343,8 +357,6 @@ public class Client
 		em.persist(mallad1);	
 		
 		
-		
-	
 		// 1 : M
 		
 		// Customer & OrderDetails
@@ -355,8 +367,8 @@ public class Client
 		od1.setCustomer(cust1);
 		em.persist(od1);
 		
-		
-		
+		od2.setCustomer(cust1);
+		em.persist(od2);
 		
 		
 		// Shop & Employee
