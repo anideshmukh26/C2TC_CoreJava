@@ -47,15 +47,6 @@ public class Client
 		
 		
 		
-		
-		ItemService is = new ItemServiceImpl();
-		MallAdminService mas = new MallAdminServiceImpl();
-		MallService ms = new MallServiceImpl();
-		OrderDetailsService ods = new OrderDetailsServiceImpl();
-		ShopOwnerService sos = new ShopOwnerServiceImpl();
-		ShopService ss = new ShopServiceImpl();
-		UserService us = new UserServiceImpl();
-	
 		//-------------------X	Customer	X----------------------------//
 		
 		// Add records in Customer Table.
@@ -76,9 +67,9 @@ public class Client
 		System.out.println("Rows Inserted for Customer"); 
 		
 		
-		// CRUD for Customer
-		CustomerService cs = new CustomerServiceImpl(); 
-		
+				// CRUD for Customer
+				CustomerService cs = new CustomerServiceImpl(); 
+				
 		
 		
 		
@@ -168,6 +159,9 @@ public class Client
 		
 		System.out.println("Rows Inserted for Item");
 		
+				// CRUD for Item
+				ItemService is = new ItemServiceImpl();
+		
 		
 		//-------------------X	MallAdmin	X----------------------------//
 		
@@ -187,6 +181,11 @@ public class Client
 		mallad1.setPhone("1457416544");
 		
 		System.out.println("Rows Inserted for MallAdmin");
+		
+		
+				// CRUD for MallAdmin 
+				MallAdminService mas = new MallAdminServiceImpl();
+
 		
 		
 		//-------------------X	Mall	X----------------------------//
@@ -210,6 +209,9 @@ public class Client
 		
 		System.out.println("Rows Inserted for Mall");
 		
+				// CRUD for Mall
+				MallService ms = new MallServiceImpl();
+				
 		
 		//-------------------X	OrderDetails	X----------------------------//
 		
@@ -243,6 +245,9 @@ public class Client
 		
 		System.out.println("Rows Inserted for OrderDetails");
 		
+				// CRUD for OrderDetails
+				OrderDetailsService ods = new OrderDetailsServiceImpl();
+		
 		
 		//-------------------X	Shop	X----------------------------//
 		
@@ -270,8 +275,12 @@ public class Client
 		em.persist(shp);
 		em.persist(shp1);
 		
-		
 		System.out.println("Rows Inserted for Shop");
+		
+		
+				// CRUD for Shop
+				ShopService ss = new ShopServiceImpl();
+		
 		
 		
 		//-------------------X	ShopOwner	X----------------------------//
@@ -301,8 +310,10 @@ public class Client
 		
 		System.out.println("Rows Inserted for ShopOwner");
 		
+				// CRUD for ShopOwner
+				ShopOwnerService sos = new ShopOwnerServiceImpl();
 		
-		
+	
 		
 		//-------------------X	User	X----------------------------//
 		
@@ -325,6 +336,11 @@ public class Client
 		
 		System.out.println("Rows Inserted for User");	
 		
+				// CRUD for User
+				UserService us = new UserServiceImpl();
+		
+				
+				
 		
 		//----------------X	1 : 1 - MAPPING	X--------------------------// 
 		
@@ -384,7 +400,7 @@ public class Client
 		em.persist(item1);
 
 	
-	
+		
 		
 		em.getTransaction().commit();
 		

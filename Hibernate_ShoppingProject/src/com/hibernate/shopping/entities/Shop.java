@@ -37,10 +37,7 @@ public class Shop implements Serializable
 	
 	@Column(name ="Lease_Status")
 	private String leaseStatus;
-	
-	/*@Column(name ="ShopOwner_ID")
-	private ShopOwner shopOwner;*/
-	
+
 	@OneToMany(mappedBy ="shop")
 	private Set<Employee> employee;
 	
@@ -50,7 +47,7 @@ public class Shop implements Serializable
 	public Shop() {}
 	
 	public Shop(int shopId, String shopCategory, String shopName, String customers, String shopStatus,
-			String leaseStatus,/* ShopOwner shopOwner,*/ Set<Employee> employee, Set<Item> item) 
+			String leaseStatus, Set<Employee> employee, Set<Item> item) 
 	{
 		this.shopId = shopId;
 		this.shopCategory = shopCategory;
@@ -58,7 +55,6 @@ public class Shop implements Serializable
 		this.customers = customers;
 		this.shopStatus = shopStatus;
 		this.leaseStatus = leaseStatus;
-		//this.shopOwner = shopOwner;
 		this.employee = employee;
 		this.item = item;
 	}
@@ -112,16 +108,6 @@ public class Shop implements Serializable
 		this.shopStatus = shopStatus;
 	}
 	
-	/*public ShopOwner getShopOwner()
-	{
-		return shopOwner;
-	}
-
-	public void setShopOwner(ShopOwner shopOwner) 
-	{
-		this.shopOwner = shopOwner;
-	}*/
-
 	public String getLeaseStatus() 
 	{
 		return leaseStatus;
