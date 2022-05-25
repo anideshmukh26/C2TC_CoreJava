@@ -142,6 +142,7 @@ public class Shop implements Serializable
 	public String toString() 
 	{
 		return "Shop [shopId=" + shopId + ", shopCategory=" + shopCategory + ", shopName=" + shopName + ", customers="
-				+ customers + ", shopStatus=" + shopStatus + ", leaseStatus=" + leaseStatus + ", employee=" + employee + ", item=" + item + "]";
-	}	
+				+ customers + ", shopStatus=" + shopStatus + ", leaseStatus=" + leaseStatus + ", employee=" + employee
+				+ ", item=" + item + "]";
+	}
 }

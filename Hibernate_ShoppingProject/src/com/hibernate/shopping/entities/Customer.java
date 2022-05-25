@@ -117,10 +117,13 @@ public class Customer implements Serializable
 		this.orderdetails = orderdetails;
 	}
 
+
 	@Override
-	public String toString() 
+	public String toString()
 	{
 		return "Customer [id=" + id + ", name=" + name + ", phone=" + phone + ", email=" + email + ", user=" + user
 				+ ", orderdetails=" + orderdetails + "]";
 	}
+
+	
 }

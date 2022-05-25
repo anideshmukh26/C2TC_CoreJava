@@ -101,7 +101,7 @@ public class OrderDetails implements Serializable
 	}
 
 	@Override
-	public String toString() 
+	public String toString()
 	{
 		return "OrderDetails [id=" + id + ", dateOfPurchase=" + dateOfPurchase + ", total=" + total + ", paymentMode="
 				+ paymentMode + ", customer=" + customer + "]";

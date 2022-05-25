@@ -43,7 +43,17 @@ public class Client
 	{
 		EntityManagerFactory factory =  Persistence.createEntityManagerFactory("JPA-PU");
 		EntityManager em = factory.createEntityManager();
-		em.getTransaction().begin();
+		em.getTransaction().begin(); 
+		
+		CustomerService cs = new CustomerServiceImpl();	
+		EmployeeService es = new EmployeeServiceImpl();
+		ItemService is = new ItemServiceImpl();
+		MallAdminService mas = new MallAdminServiceImpl();
+		MallService ms = new MallServiceImpl();
+		OrderDetailsService ods = new OrderDetailsServiceImpl();
+		ShopService ss = new ShopServiceImpl();
+		ShopOwnerService sos = new ShopOwnerServiceImpl();
+		UserService us = new UserServiceImpl();
 		
 		
 		
@@ -51,202 +61,253 @@ public class Client
 		
 		// Add records in Customer Table.
 		// Row 1
-		Customer cust = new Customer();
-		cust.setId(101151);
+	/*	Customer cust = new Customer();
+		cust.setId(1014);
 		cust.setName("Anita");
-		cust.setPhone("1234567890");
+		cust.setPhone("8974520035");
 		cust.setEmail("anita@gmail.com");
 		
 		//Row 2
 		Customer cust1 = new Customer();
-		cust1.setId(101232);
+		cust1.setId(1150);
 		cust1.setName("Rushi");
-		cust1.setPhone("1234567485");
+		cust1.setPhone("7215985402");
 		cust1.setEmail("rushi@gmail.com");
 		
-		System.out.println("Rows Inserted for Customer"); 
+		System.out.println("Rows Inserted for Customer"); */
 		
 		
 				// CRUD for Customer
-				CustomerService cs = new CustomerServiceImpl(); 
 				
+				// ?????????	Retrieve operation	??????????///
+				
+			/*	Customer cust = cs.searchCustomerById(1150);
+				//System.out.println("Id: "+cust.getId());
+				//System.out.println("Name: "+cust.getName()); 
+				System.out.println(cust);	
+				
+				//++++++++++	Update operation	+++++++++++++//
+				
+			/*	Customer cust = cs.searchCustomerById(1014);
+				
+				cust.setName("Omkar");
+				cust.setPhone("7894561230");
+				cust.setEmail("Ommi18@gmail.com");
+				cs.updateCustomer(cust);
+				
+				System.out.println("Row updated"); */
+				
+				//------------	Delete operation	-----------------//
+				
+				/*	Customer cust = cs.searchCustomerById(1150);
+					cs.deleteCustomer(cust);	
+					
+					System.out.println("Row Deleted");	*/
 		
 		
 		
 		//-------------------X	Employee	X----------------------------//
 		
 		// Add records in employee Table.
-		// Row1
-		Employee emp = new Employee();
-		LocalDate date =LocalDate.of(1996,9,26);
+		// Row 1
+	/*	Employee emp = new Employee();
 		
-		emp.setId(7855);
-		emp.setName("Aniket");
-		emp.setDob(date);
+		LocalDate empdob =LocalDate.of(1995,2,5);
+		
+		emp.setId(2535);
+		emp.setName("Raj");
+		emp.setDob(empdob);
 		emp.setSalary(25000);
-		emp.setAddress("Thane");
+		emp.setAddress("Ghatkopar");
 		emp.setDesignation("Cashier");
 		
-		// Row2
-		Employee emp1 = new Employee();
-		LocalDate date1 =LocalDate.of(1999,4,15);	 
 		
-		emp1.setId(56562);
+		// Row 2
+		Employee emp1 = new Employee();
+		
+		LocalDate empdob1 =LocalDate.of(1999,4,15);	 
+		
+		emp1.setId(1105);
 		emp1.setName("Rutik");
-		emp1.setDob(date1);
+		emp1.setDob(empdob1);
 		emp1.setSalary(20000);
 		emp1.setAddress("Mulund");
 		emp1.setDesignation("Salesman");
 		
-		System.out.println("Rows Inserted for Employee"); 
+		
+		// Row 3
+		Employee emp2 = new Employee();
+		
+		LocalDate empdob2 =LocalDate.of(1996,9,26);
+				
+		emp2.setId(2556);
+		emp2.setName("Aniket");
+		emp2.setDob(empdob2);
+		emp2.setSalary(45000);
+		emp2.setAddress("Thane");
+		emp2.setDesignation("Manager");
+		
+		System.out.println("Rows Inserted for Employee");	
+		
 		
 				// CRUD for Employee
-				EmployeeService es = new EmployeeServiceImpl();
 				
 				// ?????????	Retrieve operation	??????????///
 											
-				/*emp = es.searchEmployeeById(7855);
+			/*	Employee emp = es.searchEmployeeById(2556);
 				System.out.println("Id: "+emp.getId());
-				System.out.println("Name: "+emp.getName());
+				System.out.println("Name: "+emp.getName());	
 				System.out.println(emp); */
+				
 														
 				//++++++++++	Update operation	+++++++++++++//
 											
-				/*emp = es.searchEmployeeById(56562);
+			/*	Employee emp = es.searchEmployeeById(1105);
 				emp.setName("Harsh");
 				emp.setSalary(15000);
 				emp.setAddress("Diva");
 				emp.setDesignation("Store Keeper");
 				es.updateEmployee(emp); 
 														
-				System.out.println("Rows Updated"); */
+				System.out.println("Row Updated");		*/
+				
 														
 				//------------	Delete operation	-----------------//
 											
-				/*emp = es.searchEmployeeById(56562);
+			/*	Employee emp = es.searchEmployeeById(1105);
 				System.out.println(emp);
 				es.deleteEmployee(emp);
 														
-				System.out.println("Row Deleted"); */
+				System.out.println("Row Deleted");	*/
 		
 		
 		//-------------------X	Item	X----------------------------//
 		
 		// Add records in Item Table.
 		// Row 1
-		Item item = new Item();
-		LocalDate date2 =LocalDate.of(2022,3,15);
-		LocalDate date3 =LocalDate.of(2032,3,15);
+	/*	Item item = new Item();
 		
-		item.setId(454646555);
-		item.setName("Mobile");
-		item.setManufacturing(date2);
-		item.setExpiry(date3);
+		LocalDate mfdate =LocalDate.of(2022, 3, 15);
+		LocalDate expdate =LocalDate.of(2032, 3, 15);
+		
+		item.setId(589);
+		item.setName("Nokia 6.1");
+		item.setManufacturing(mfdate);
+		item.setExpiry(expdate);
 		item.setPrice(10000);
-		item.setCategory("Android");
+		item.setCategory("Mobile");
+		
 		
 		// Row 2 
 		Item item1 = new Item();
-		LocalDate date4 =LocalDate.of(2021,10,10);
-		LocalDate date5 =LocalDate.of(2025,3,28);
 		
-		item1.setId(8989894);
+		LocalDate mfdate1 =LocalDate.of(2021, 10, 10);
+		LocalDate expdate1 =LocalDate.of(2025, 3, 28);
+		
+		item1.setId(8989);
 		item1.setName("MB Protien");
-		item1.setManufacturing(date4);
-		item1.setExpiry(date5);
+		item1.setManufacturing(mfdate1);
+		item1.setExpiry(expdate1);
 		item1.setPrice(4500);
 		item1.setCategory("Food");
 		
+		
+		// Row 3
+		Item item2 = new Item();
+		
+		LocalDate mfdate2 =LocalDate.of(2022, 1, 6);
+		LocalDate expdate2 =LocalDate.of(2032, 1, 6);
+				
+		item2.setId(755);
+		item2.setName("Apple iWatch");
+		item2.setManufacturing(mfdate2);
+		item2.setExpiry(expdate2);
+		item2.setPrice(25000);
+		item2.setCategory("Digital Watch");
+		
 		System.out.println("Rows Inserted for Item");
 		
-				// CRUD for Item
-				ItemService is = new ItemServiceImpl();
-		
+			
 		
 		//-------------------X	MallAdmin	X----------------------------//
 		
 		// Add records in MallAdmin Table.
 		// Row 1
-		MallAdmin mallad = new MallAdmin();
+		MallAdmin malladmn = new MallAdmin();
 		
-		mallad.setName("Raju");
-		mallad.setPassword("1234");
-		mallad.setPhone("1457495614");
+		malladmn.setName("Siddharth");
+		malladmn.setPassword("s1234");
+		malladmn.setPhone("9187526569");
 		
 		// Row 2
-		MallAdmin mallad1 = new MallAdmin();
+		MallAdmin malladmn1 = new MallAdmin();
 		
-		mallad1.setName("Mohatsim");
-		mallad1.setPassword("1474");
-		mallad1.setPhone("1457416544");
+		malladmn1.setName("Prasad");
+		malladmn1.setPassword("p1234");
+		malladmn1.setPhone("7954003347");
 		
-		System.out.println("Rows Inserted for MallAdmin");
+		System.out.println("Rows Inserted for MallAdmin");	*/
 		
 		
-				// CRUD for MallAdmin 
-				MallAdminService mas = new MallAdminServiceImpl();
-
+	
 		
+			
 		
 		//-------------------X	Mall	X----------------------------//
 		
 		// Add records in Mall Table.
 		// Row 1
-		Mall mall = new Mall();
+	/*	Mall mall = new Mall();
 		
-		mall.setId(1111);
-		mall.setMallName("Korum");
+		mall.setId(75);
+		mall.setMallName("Viviana");
 		mall.setLocation("Thane");
 		mall.setCategories("Metro city");
 		
 		// Row 2
 		Mall mall1 = new Mall();
 		
-		mall1.setId(1112);
+		mall1.setId(99);
 		mall1.setMallName("Pheonix");
-		mall1.setLocation("Kurla");
+		mall1.setLocation("mumbai");
 		mall1.setCategories("Metro city");
 		
 		System.out.println("Rows Inserted for Mall");
 		
-				// CRUD for Mall
-				MallService ms = new MallServiceImpl();
-				
+		
 		
 		//-------------------X	OrderDetails	X----------------------------//
 		
 		// Add records in OrderDetails Table.
 		// Row 1
 		OrderDetails od = new OrderDetails();
-		LocalDateTime datetime = LocalDateTime.of(2022,5,12,7,20);
+		LocalDateTime dtop = LocalDateTime.of(2022,5,12,15,20);
 		
 		od.setId(7979879);
-		od.setDateOfPurchase(datetime);
+		od.setDateOfPurchase(dtop);
 		od.setTotal(10000);
 		od.setPaymentMode("Online");
 		
 		// Row 2
 		OrderDetails od1 = new OrderDetails();
-		LocalDateTime datetime1 = LocalDateTime.of(2022,4,26,4,30);
+		LocalDateTime dtop1 = LocalDateTime.of(2022,4,26,11,30);
 		
 		od1.setId(6568654);
-		od1.setDateOfPurchase(datetime1);
-		od1.setTotal(10000);
+		od1.setDateOfPurchase(dtop1);
+		od1.setTotal(12000);
 		od1.setPaymentMode("Online");
 		
 		// Row 2
 		OrderDetails od2 = new OrderDetails();
-		LocalDateTime datetime2 = LocalDateTime.of(2022,4,26,4,30);
+		LocalDateTime dtop2 = LocalDateTime.of(2022,6,7,18,05);
 			
-		od2.setId(6568655);
-		od2.setDateOfPurchase(datetime2);
+		od2.setId(68787989);
+		od2.setDateOfPurchase(dtop2);
 		od2.setTotal(5000);
 		od2.setPaymentMode("Online");
 		
 		System.out.println("Rows Inserted for OrderDetails");
 		
-				// CRUD for OrderDetails
-				OrderDetailsService ods = new OrderDetailsServiceImpl();
 		
 		
 		//-------------------X	Shop	X----------------------------//
@@ -278,42 +339,36 @@ public class Client
 		System.out.println("Rows Inserted for Shop");
 		
 		
-				// CRUD for Shop
-				ShopService ss = new ShopServiceImpl();
-		
 		
 		
 		//-------------------X	ShopOwner	X----------------------------//
 		
 		// Add records in ShopOwner Table.
-		ShopOwner show = new ShopOwner();
-		LocalDate date6 =LocalDate.of(1980,10,10);
+		ShopOwner shown = new ShopOwner();
+		LocalDate sodob =LocalDate.of(1980,10,10);
 		
 		// Row 1
-		show.setId(110011);
-		show.setName("Chetan");
-		show.setDob(date6);
-		show.setAddress("101, Raj CHS, Mulund");
+		shown.setId(110011);
+		shown.setName("Chetan");
+		shown.setDob(sodob);
+		shown.setAddress("101, Raj CHS, Mulund");
 		
 		// Row 2
-		ShopOwner show1 = new ShopOwner();
-		LocalDate date7 =LocalDate.of(1990,3,28);
+		ShopOwner shown1 = new ShopOwner();
+		LocalDate sodob1 =LocalDate.of(1990,3,28);
 		
-		show1.setId(110012);
-		show1.setName("Harsh");
-		show1.setDob(date7);
-		show1.setAddress("306, Deva CHS, Kalyan");
+		shown1.setId(110012);
+		shown1.setName("Harsh");
+		shown1.setDob(sodob1);
+		shown1.setAddress("306, Deva CHS, Kalyan");
 		
-		em.persist(show);
-		em.persist(show1);
+		em.persist(shown);
+		em.persist(shown1);
 		
 		
 		System.out.println("Rows Inserted for ShopOwner");
 		
-				// CRUD for ShopOwner
-				ShopOwnerService sos = new ShopOwnerServiceImpl();
 		
-	
 		
 		//-------------------X	User	X----------------------------//
 		
@@ -321,28 +376,40 @@ public class Client
 		// Row 1 
 		User user = new User();
 		
-		user.setId(4254488);
+		user.setId(752300);
 		user.setName("Anita123");
-		user.setType("Regular");
+		user.setType("Customer");
 		user.setPassword("Anu1234");
 		
 		// Row 2
 		User user1 = new User();
 		
-		user1.setId(1323255);
+		user1.setId(996581);
 		user1.setName("Rushi007");
-		user1.setType("New");
+		user1.setType("Customer");
 		user1.setPassword("Rushi@007");
+		
+		// Row 3
+		User user2 = new User();
+				
+		user2.setId(1545);
+		user2.setName("Sid786");
+		user2.setType("Mall Admin");
+		user2.setPassword("Sid@123");
+		
+		// Row 4
+		User user3 = new User();
+						
+		user3.setId(1501);
+		user3.setName("Prasad15");
+		user3.setType("Mall Admin");
+		user3.setPassword("Prasad@1596");
 		
 		System.out.println("Rows Inserted for User");	
 		
-				// CRUD for User
-				UserService us = new UserServiceImpl();
+
 		
-				
-				
-		
-		//----------------X	1 : 1 - MAPPING	X--------------------------// 
+		//----------------X		1 : 1 - MAPPING		X--------------------------// 
 		
 		// Customer & USer
 		cust.setUser(user);
@@ -351,25 +418,26 @@ public class Client
 		em.persist(cust);
 		em.persist(cust1);
 		
+		
 		// MallAdmin & User
-		mallad.setUser(user);
-		mallad1.setUser(user1);
+		malladmn.setUser(user2);
+		malladmn1.setUser(user3);
 		
 		
 		// MallAdmin & Mall
-		mallad.setMall(mall);
-		mallad1.setMall(mall1);
+		malladmn.setMall(mall);
+		malladmn1.setMall(mall1);
 		
 		
 		// MallAdmin & ShopOwner
-		mallad.setShopowner(show);
-		mallad1.setShopowner(show1);
+		malladmn.setShopowner(shown);
+		malladmn1.setShopowner(shown1);
 		
-		em.persist(mallad);
-		em.persist(mallad1);	
+		em.persist(malladmn);
+		em.persist(malladmn1);	
 		
 		
-		//---------------------X	1 : M - Mapping	---------------------------//
+		//------------------X		1 : M - MAPPING		X---------------------------//
 		
 		// Customer & OrderDetails
 		
@@ -386,25 +454,44 @@ public class Client
 		// Shop & Employee
 		
 		emp.setShop(shp);
-		emp1.setShop(shp1);
-		
 		em.persist(emp);
+		
+		emp1.setShop(shp1);
 		em.persist(emp1);
+		
+		emp2.setShop(shp);
+		em.persist(emp2);
+		
 		
 		// Shop & Item
 		
 		item.setShop(shp);
-		item1.setShop(shp1);
-		
 		em.persist(item);
-		em.persist(item1);
-
-	
 		
+		item1.setShop(shp1);
+		em.persist(item1);
+		
+		item2.setShop(shp);
+		em.persist(item2);			*/
+				
+				
+		/*Employee emp = es.searchEmployeeById(2556);
+		es.deleteEmployee(emp);
+		System.out.println("Row deleted");*/
+		
+		Shop shp = ss.searchShopById(10654);
+		ss.deleteShop(shp);
+		System.out.println("Row deleted");
+	
+
+
+
 		
 		em.getTransaction().commit();
 		
 		em.close();
-		factory.close(); 
+		factory.close();			
+		
 	}
 }
+
