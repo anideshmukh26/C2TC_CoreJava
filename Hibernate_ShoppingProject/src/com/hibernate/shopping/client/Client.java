@@ -61,7 +61,7 @@ public class Client
 		
 		// Add records in Customer Table.
 		// Row 1
-	/*	Customer cust = new Customer();
+		Customer cust = new Customer();
 		cust.setId(1014);
 		cust.setName("Anita");
 		cust.setPhone("8974520035");
@@ -74,7 +74,7 @@ public class Client
 		cust1.setPhone("7215985402");
 		cust1.setEmail("rushi@gmail.com");
 		
-		System.out.println("Rows Inserted for Customer"); */
+		System.out.println("Rows Inserted for Customer"); 
 		
 		
 				// CRUD for Customer
@@ -110,7 +110,7 @@ public class Client
 		
 		// Add records in employee Table.
 		// Row 1
-	/*	Employee emp = new Employee();
+		Employee emp = new Employee();
 		
 		LocalDate empdob =LocalDate.of(1995,2,5);
 		
@@ -185,7 +185,7 @@ public class Client
 		
 		// Add records in Item Table.
 		// Row 1
-	/*	Item item = new Item();
+		Item item = new Item();
 		
 		LocalDate mfdate =LocalDate.of(2022, 3, 15);
 		LocalDate expdate =LocalDate.of(2032, 3, 15);
@@ -246,18 +246,16 @@ public class Client
 		malladmn1.setPassword("p1234");
 		malladmn1.setPhone("7954003347");
 		
-		System.out.println("Rows Inserted for MallAdmin");	*/
+		System.out.println("Rows Inserted for MallAdmin");	
 		
 		
-	
-		
-			
+
 		
 		//-------------------X	Mall	X----------------------------//
 		
 		// Add records in Mall Table.
 		// Row 1
-	/*	Mall mall = new Mall();
+		Mall mall = new Mall();
 		
 		mall.setId(75);
 		mall.setMallName("Viviana");
@@ -472,20 +470,8 @@ public class Client
 		em.persist(item1);
 		
 		item2.setShop(shp);
-		em.persist(item2);			*/
+		em.persist(item2);		
 				
-				
-		/*Employee emp = es.searchEmployeeById(2556);
-		es.deleteEmployee(emp);
-		System.out.println("Row deleted");*/
-		
-		Shop shp = ss.searchShopById(10654);
-		ss.deleteShop(shp);
-		System.out.println("Row deleted");
-	
-
-
-
 		
 		em.getTransaction().commit();
 		
