@@ -37,6 +37,7 @@ import com.hibernate.shopping.service.ShopServiceImpl;
 import com.hibernate.shopping.service.UserService;
 import com.hibernate.shopping.service.UserServiceImpl;
 
+
 public class Client 
 {
 	public static void main(String[] args)
