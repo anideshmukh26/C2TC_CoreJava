@@ -18,7 +18,7 @@ public class GSNormalAcc extends NormalAcc
 	@Override
 	public void bookProduct(float charges)
 	{
-		System.out.println("Dear Normal User:-\n	Your product Charges are: "+charges+"\n	 And Delivery Charges is: "+deliveryCharges );
+		System.out.println("Dear Normal User:-\n	Your product Charge is: "+charges+"\n	 And Delivery Charges is: "+deliveryCharges );
 		System.out.println("	           Total charges: "+(charges+deliveryCharges));
 	}
 	@Override
