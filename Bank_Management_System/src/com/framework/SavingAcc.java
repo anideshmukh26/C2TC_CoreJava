@@ -21,12 +21,6 @@ public class SavingAcc	extends BankAcc
 		
 	}
 
-	@Override
-	public String toString() 
-	{
-		return "SavingAcc [isSalaried=" + isSalaried + "]";
-	}
-
 	public boolean isSalaried() 
 	{
 		return isSalaried;
@@ -40,5 +34,11 @@ public class SavingAcc	extends BankAcc
 	public static float getMinbal()
 	{
 		return MINBAL;
-	}	
+	}
+	
+	@Override
+	public String toString() 
+	{
+		return "SavingAcc [isSalaried=" + isSalaried + "]";
+	}
 }

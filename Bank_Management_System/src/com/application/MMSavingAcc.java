@@ -18,7 +18,7 @@ public class MMSavingAcc extends SavingAcc
 	@Override
 	public void withdraw(float accBal)
 	{
-		System.out.println("Dear Customer:\n		Your Saving Account Balance  are:"+accBal);
+		System.out.println("Dear Saving Account Holder :\n	Your Saving Account Balance  are:"+accBal);
 	}
 
 	@Override

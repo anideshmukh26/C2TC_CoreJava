@@ -19,14 +19,15 @@ public class CurrentAcc extends BankAcc
 		
 	}
 
+	public float getCreditLimit()
+	{
+		return creditLimit;
+	}
+	
 	@Override
 	public String toString() 
 	{
 		return "CurrentAcc [creditLimit=" + creditLimit + "]";
 	}
 
-	public float getCreditLimit()
-	{
-		return creditLimit;
-	}
 }
