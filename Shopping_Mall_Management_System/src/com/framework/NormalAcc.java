@@ -3,13 +3,14 @@ package com.framework;
 
 public class  NormalAcc extends ShopAcc
 {
-	private final float deliveryCharges = 40;
+	protected float deliveryCharges = 40;
 	
 	public NormalAcc() {}
 	
 	public NormalAcc(int accNo, String accNm, float charges, float deliveryCharges) 
 	{
 		super(accNo, accNm, charges);
+		this.deliveryCharges = deliveryCharges;
 	}
 	
 	@Override
@@ -22,10 +23,9 @@ public class  NormalAcc extends ShopAcc
 	{
 		return deliveryCharges;
 	}
-	
+
 	@Override
-	public String toString()
-	{
+	public String toString() {
 		return "NormalAcc [deliveryCharges=" + deliveryCharges + "]";
 	}
 }

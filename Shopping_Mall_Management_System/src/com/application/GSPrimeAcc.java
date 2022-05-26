@@ -18,7 +18,7 @@ public class GSPrimeAcc extends PrimeAcc
 	@Override
 	public void bookProduct(float charges)
 	{
-		
+		System.out.println("Dear Prime User: \n 		Free Delivery \n		Your Product Charges are:"+charges);
 	}
 
 	@Override

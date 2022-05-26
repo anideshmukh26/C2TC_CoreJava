@@ -12,14 +12,14 @@ public class Client
 	{
 		GSShopFactory gssfactory = new GSShopFactory();
 		gssfactory.getNewPrimeAcc(1001,"Aniket", 499, true);
-		gssfactory.getNewNormalAcc(1201,"Rushi" , 499, 40);
+		gssfactory.getNewNormalAcc(1201,"Rushi" , 899, 40);
 		
 		GSPrimeAcc gsprime = new GSPrimeAcc();
 		gsprime.getAccNm();
 		gsprime.getAccNo();
 		gsprime.getCharges();
 		
-		gsprime.bookProduct(700);
+		gsprime.bookProduct(4799);
 		gsprime.toString();
 		
 		GSNormalAcc gsnormal = new GSNormalAcc();
@@ -28,7 +28,7 @@ public class Client
 		gsnormal.getCharges();
 		gsnormal.getDeliveryCharges();
 		
-		gsnormal.bookProduct(700);
+		gsnormal.bookProduct(2349);
 		gsnormal.toString();
 	}
 }
