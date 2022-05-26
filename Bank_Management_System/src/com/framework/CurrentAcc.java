@@ -4,7 +4,7 @@ package com.framework;
 
 public class CurrentAcc extends BankAcc
 {
-	private final float creditLimit = 10000;
+	protected final float creditLimit = 10000;
 	
 	public CurrentAcc() {}
 

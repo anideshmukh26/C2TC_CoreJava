@@ -16,7 +16,8 @@ public class MMCurrentAcc extends CurrentAcc
 	@Override
 	public void withdraw(float accBal)
 	{
-		
+		System.out.println("Dear Customer : \n Your Current Account Balance are: "+accBal+"\n        And Credit limit  is: "+creditLimit);
+		System.out.println("		    Total Amount : " +(accBal+creditLimit));
 	}
 
 	@Override

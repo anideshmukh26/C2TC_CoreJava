@@ -26,12 +26,6 @@ public abstract class BankAcc
 		
 	}
 
-	@Override
-	public String toString() 
-	{
-		return "BankAcc [accNo=" + accNo + ", accNm=" + accNm + ", accBal=" + accBal + "]";
-	}
-
 	public int getAccNo() 
 	{
 		return accNo;
@@ -61,4 +55,10 @@ public abstract class BankAcc
 	{
 		this.accBal = accBal;
 	}	
+	
+	@Override
+	public String toString() 
+	{
+		return "BankAcc [accNo=" + accNo + ", accNm=" + accNm + ", accBal=" + accBal + "]";
+	}
 }
