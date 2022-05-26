@@ -18,8 +18,8 @@ public class  NormalAcc extends ShopAcc
 	{
 		
 	}
-
-	public float getDeliveryCharges() 
+	
+	public float getDeliveryCharges()
 	{
 		return deliveryCharges;
 	}

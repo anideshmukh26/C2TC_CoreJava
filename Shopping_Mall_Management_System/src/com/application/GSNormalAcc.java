@@ -21,11 +21,9 @@ public class GSNormalAcc extends NormalAcc
 		System.out.println("Dear Normal User:-\n	Your product Charges are: "+charges+"\n	 And Delivery Charges is: "+deliveryCharges );
 		System.out.println("	           Total charges: "+(charges+deliveryCharges));
 	}
-	
 	@Override
 	public String toString()
 	{
-		return "GSNormalAcc [accNo=" + getAccNo() + ", charges=" + getCharges() + ", toString()=" + super.toString()
-				+ ", getAccNm()=" + getAccNm() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
+		return "GSNormalAcc [deliveryCharges=" + deliveryCharges + "]";
 	}	
 }
