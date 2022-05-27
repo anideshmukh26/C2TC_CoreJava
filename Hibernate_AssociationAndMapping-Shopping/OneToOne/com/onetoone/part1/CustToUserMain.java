@@ -16,7 +16,7 @@ public class CustToUserMain
 		
 		Customer cust = new Customer();
 		
-		cust.setName("Vedant");
+		cust.setName("Alfiya");
 		cust.setPhone("1234567890");
 		cust.setEmail("vedant@gmail.com");
 		
