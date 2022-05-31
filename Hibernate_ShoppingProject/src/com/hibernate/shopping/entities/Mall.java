@@ -21,7 +21,7 @@ public class Mall implements Serializable
 	
 	@Id
 	@Column(name ="Mall_ID")
-	private long Id;
+	private int Id;
 	
 	@Column(name ="Mall_Name")
 	private String mallName;
@@ -37,7 +37,7 @@ public class Mall implements Serializable
 	
 	public Mall() {}
 
-	public Mall(long id, String mallName, String location, String categories, MallAdmin mallAdmin)
+	public Mall(int id, String mallName, String location, String categories, MallAdmin mallAdmin)
 	{
 		Id = id;
 		this.mallName = mallName;
@@ -46,12 +46,12 @@ public class Mall implements Serializable
 		this.mallAdmin = mallAdmin;
 	}
 
-	public long getId() 
+	public int getId() 
 	{
 		return Id;
 	}
 
-	public void setId(long id) 
+	public void setId(int id) 
 	{
 		Id = id;
 	}

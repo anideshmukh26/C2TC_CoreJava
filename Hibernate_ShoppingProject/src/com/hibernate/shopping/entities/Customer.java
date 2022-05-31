@@ -18,7 +18,6 @@ import javax.persistence.Table;
 @Entity
 
 @Table(name = "customer")
-
 public class Customer implements Serializable
 {
 	private static final long serialVersionUID =1L;
@@ -44,7 +43,6 @@ public class Customer implements Serializable
 	private Set<OrderDetails> orderdetails;
 	
 	public Customer() {}
-
 
 	public Customer(int id, String name, String phone, String email, User user, Set<OrderDetails> orderdetails)
 	{

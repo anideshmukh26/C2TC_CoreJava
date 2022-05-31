@@ -22,7 +22,7 @@ public class Item implements Serializable
 	
 	@Id
 	@Column(name ="Item_ID")
-	private long id;
+	private int id;
 	
 	@Column(name ="Item_Name")
 	private String name;
@@ -45,7 +45,7 @@ public class Item implements Serializable
 	
 	public Item() {}
 	
-	public Item(long id, String name, LocalDate manufacturing, LocalDate expiry, float price, String category,
+	public Item(int id, String name, LocalDate manufacturing, LocalDate expiry, float price, String category,
 			Shop shop) 
 	{
 		this.id = id;
@@ -57,12 +57,12 @@ public class Item implements Serializable
 		this.shop = shop;
 	}
 
-	public long getId() 
+	public int getId() 
 	{
 		return id;
 	}
 	
-	public void setId(long id) 
+	public void setId(int id) 
 	{
 		this.id = id;
 	}
